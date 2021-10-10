@@ -1,0 +1,43 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Origin: Debian
+Label: DebianDog
+Suite: testing
+Version: 1.0
+Codename: buster
+Architectures: i386
+Components: main
+Description: DebianDog repository
+Date: Sun, 10 Oct 2021 14:53:06 +0000
+MD5Sum:
+ 8e953faeba56fbbbc2a3b94e3b21f2ae           332615 Packages
+ 4167002fd6f54ce16096f0f467fa6500           114985 Packages.gz
+ 62dcfe894970ed4489992b3313c60fc2              186 Release
+ 4167002fd6f54ce16096f0f467fa6500           114985 Translation-en.gz
+SHA1:
+ 9edf909620798db20caf53fb8a32ff0773a119cb           332615 Packages
+ 2610603b1a4d25a7e66878b37959452839a0729f           114985 Packages.gz
+ bfd2686aee30c573799c1bd70715f28b3a123c84              186 Release
+ 2610603b1a4d25a7e66878b37959452839a0729f           114985 Translation-en.gz
+SHA256:
+ 6b2c99cca8740ddfa5f22b0462ba8927577e1fad90315841ae6146bdeac389d3           332615 Packages
+ 5accca6e3e697f9e752911be415fed898ed8a6688b962cf0d708ebd5b25ceee8           114985 Packages.gz
+ 9ac498b306fbc2099563a77e43fc1314edfc9264102b3fb91a6e3cbbd38eb0ca              186 Release
+ 5accca6e3e697f9e752911be415fed898ed8a6688b962cf0d708ebd5b25ceee8           114985 Translation-en.gz
+SHA512:
+ be12f597808e8bc090871bcccb57e2b0c2dd8491932180d5277f7e22db47fdfbef8fbc5d8c814ace515d159fb619ab066b0af3d8470f891d230db343bc7773ea           332615 Packages
+ a51d9fd20c5563a64871548c7185047c6ca96ca17c986f8facd8039c99151f4767ff5bbb03d1a02191c3589b7558d8ab710b96b6b3b0b3580c8bea99976928fd           114985 Packages.gz
+ 4f15c37b126d38d20e15afc5f86ccc4f3d18ba0dc5eb75aa8114b08e29cf6c5c0c4f29d684bd10c2e5dea57bdb1cc614b0791e3bef84ab0c6114909f3481a8ce              186 Release
+ a51d9fd20c5563a64871548c7185047c6ca96ca17c986f8facd8039c99151f4767ff5bbb03d1a02191c3589b7558d8ab710b96b6b3b0b3580c8bea99976928fd           114985 Translation-en.gz
+-----BEGIN PGP SIGNATURE-----
+
+iQEzBAEBCAAdFiEEEzvZDupk2V//eP5nrYe8en1zCB0FAmFi/lIACgkQrYe8en1z
+CB3zRwf/egat40WCcP+smA48KwkcbdVQee+bH5jN3xQZE/jmQofVG2HJJlUpcKLK
+DMqUaxm2WCTYDyn7hcQplcCLmkb/5XA8iai7exkoyT2hm+aZQw6apVBm1GJWcDL3
+mz3sqv9uCPaeeGEU+1jc5Hvl0VcfPToPgyWEck8Ak5fFnYUAFJSfJk1bxWwo43om
+onEe2csw/59/vxzWd4qThPc9UgV5zYfhbUAEjkm/QDF1LXd2l+KOWe6lfrAbkwD8
+DO9qunCn34d4N0RVql6Or2Ll06uwk/0jOsDZak4506m7Jj0zzaFf5UERukW6Nz7o
+sgVL9havPrbvrY6dyWC91jZDuSjzww==
+=D6in
+-----END PGP SIGNATURE-----

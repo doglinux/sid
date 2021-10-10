@@ -1,0 +1,43 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Origin: Debian
+Label: DebianDog
+Suite: testing
+Version: 1.0
+Codename: buster
+Architectures: i386
+Components: main
+Description: DebianDog repository
+Date: Sun, 10 Oct 2021 14:52:24 +0000
+MD5Sum:
+ f256407d0ec4600157410b11d27d7f95           369337 Packages
+ 322c0885bba5409f2758d99becc0af70           129382 Packages.gz
+ 2e0f6d822e76a58aebc06c7e572792ed              186 Release
+ 322c0885bba5409f2758d99becc0af70           129382 Translation-en.gz
+SHA1:
+ 03f4358c0c74bcd5e0ef3115b9162608bd2e032a           369337 Packages
+ af9f407e941bed6e28e80627f11df9eb406ddb2e           129382 Packages.gz
+ 2fc2f78ccf93a3ed7af9519d2dabd10f31248c0b              186 Release
+ af9f407e941bed6e28e80627f11df9eb406ddb2e           129382 Translation-en.gz
+SHA256:
+ 886a82205b640be8eaa87ca34578cd9c4cf795fde148fbdc7f731de43827fd39           369337 Packages
+ d790fbb8af2b106bb2fe4a8f2f2dbbd376c1adb8fbbff7db5f6aef34c9c3ab7a           129382 Packages.gz
+ 6813f356db44c00de8598b1152afc878e2829c6fe60052768e907d1bf53bec88              186 Release
+ d790fbb8af2b106bb2fe4a8f2f2dbbd376c1adb8fbbff7db5f6aef34c9c3ab7a           129382 Translation-en.gz
+SHA512:
+ d5493d510be9846db1f9c6b08e5f2af03ece62f3b19454cb95239c507db357f48e021b4853d6bdef8620ead70f2ff4042e97440bb2eaeac0e308748b9d5a1a3c           369337 Packages
+ 2b1a7b927f02c327cee35ce7126fc497973c9fae8db3ef5e9e6a07996015c41c29f5aff843ad24652bc38e3b26cbfcbf31d04db62e3724b35d1b34f652c30053           129382 Packages.gz
+ 41c3ba76f3b2da8adf57f3e71bfbd49de4d5be592fe536d4caee31fd8ed5b97d685394f8d80cee409898d45ee45e2017291f2a910b838f005b1af42e4487ffd8              186 Release
+ 2b1a7b927f02c327cee35ce7126fc497973c9fae8db3ef5e9e6a07996015c41c29f5aff843ad24652bc38e3b26cbfcbf31d04db62e3724b35d1b34f652c30053           129382 Translation-en.gz
+-----BEGIN PGP SIGNATURE-----
+
+iQEzBAEBCAAdFiEEEzvZDupk2V//eP5nrYe8en1zCB0FAmFi/igACgkQrYe8en1z
+CB13sAf/WDhlhtFa+wfudj+9lEetg0ddv2egSTSs4t5xnVgJBDnIGz3u6dUutYw4
+OGpJVLjJ/f1wPAbUZg7tJgABXTUwMgXQ8/HSJWwuqZf0+YMyPxa1bumZjEgeMrgv
+ksTefLNgdSNXiMlWRicFosruxASz9KdQ0w060w3n47gALGz06Afo+VrifIIVIGGF
+/ucDg17ZrLIc4NZIIsPgFU4xwc/VMISgbcAg1by7UiKoGhKoCGa8bWk0NJo9xHES
+3Ikch/oy0yS6tjW7hm66rKgLxQu2jI5UWSndVPpKE8Scxj+phVjJ3Cpd2u9A29WV
+Ty/p8HWI/N4pG+tz0SyCcDqJMfe4Pw==
+=b+3U
+-----END PGP SIGNATURE-----
