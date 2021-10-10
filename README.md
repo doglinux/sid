@@ -1,1 +1,2 @@
-# bulldog
+# sid
+DebianDog Sid repo
