@@ -3341,6 +3341,28 @@ Description: Fraunhofer FDK AAC codec library.
  Fraunhofer IIS software implementations of the open ISO MPEG audio codecs
  AAC, HE-AAC, HE-AACv2 and AAC-ELD.
 
+Package: libffi6
+Architecture: i386
+Version: 3.2.1-9
+Multi-Arch: same
+Priority: optional
+Section: libs
+Source: libffi
+Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Installed-Size: 55
+Depends: libc6 (>= 2.7)
+Filename: ./libffi6_3.2.1-9_i386.deb
+Size: 19976
+MD5sum: 5a2da39d1c7be3405d3ae91ff13d8e64
+SHA1: 8dd7fffdbc035014b623bfe21e2985d108724ef7
+SHA256: eebf776b15212e0c41d046bd58b37f866e6b0cef249e9c866f722bb96cb4fd16
+SHA512: 023d6687e5d63a3d7811a107d19a5c8fe56ce25ae73db812dd02980bd3723a7e566a1ae044c81253b78e3241a9275def17cb474fafddcb8f29dd34cf9e1d185c
+Homepage: https://sourceware.org/libffi/
+Description: Foreign Function Interface library runtime
+ A foreign function interface is the popular name for the interface that
+ allows code written in one language to call code written in another
+ language.
+
 Package: libgnome-keyring-common
 Architecture: all
 Version: 3.12.0-1
@@ -4904,6 +4926,40 @@ MD5sum: 2b71f161590756f24a298c8943444dd3
 SHA1: 9f43e5e0ba4110ac46caa5ee8f2cc08d0d0bdd96
 SHA256: 9d876da3166f1e0221c23f55c660155d4c8074501f8db787ac10688f2e2a2488
 SHA512: 6486f9382447ae75ac0de577b482e16c981457179352199a58f9c52e5bb3dbbce6c95ac8fd6c11bff3421ed9a5ec3e039e508ac03928359c03d395ad73aecaba
+Homepage: https://github.com/luffah/obkey
+Description: Openbox Key Editor
+ .
+ A keybinding editor for OpenBox, it includes launchers and window management keys.
+ .
+ It allows to:
+     * can check almost all keybinds in one second.
+     * add new keybinds, the default key associated will be 'a' and no action will be associated;
+     * add new child keybinds;
+     * setup existing keybinds :
+         * add/remove/sort/setup actions in the actions list;
+         * change the keybind by clicking on the item in the list;
+     * duplicate existing keybinds;
+     * remove a keybind.
+ .
+ The current drawbacks :
+     * XML inculsion is not managed. If you want to edit many files, then you shall open them with ;
+     *  conditionnal tag is not supported (but did you knew it exists).
+
+Package: obkey
+Architecture: i386
+Version: 1.3.1-4
+Priority: optional
+Section: x11
+Maintainer: fredx181
+Installed-Size: 157
+Depends: python2, libgtk-3-0, gir1.2-gtk-3.0
+Replaces: python-gi
+Filename: ./obkey_1.3.1-4_i386.deb
+Size: 193556
+MD5sum: d7c1b64421279ec43a5c5d47a2229812
+SHA1: 3f6ba80d577bc47c31167967bd8362d770906b38
+SHA256: 4f28f780bd9e0d1858792757a5592d322d0fe62bd60ee0546170f13a773b7168
+SHA512: b4917a65756410df279c550ba1a4db7fcb41dc7d947b864fea73b2c82c084421a10abca4fe4693b6ca32278b6b87cd3893974ddce61ed8954b8ac00b79068832
 Homepage: https://github.com/luffah/obkey
 Description: Openbox Key Editor
  .

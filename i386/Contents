@@ -1219,6 +1219,8 @@ usr/lib/i386-linux-gnu/libevent-2.0.so.5		    libevent-2.0-5
 usr/lib/i386-linux-gnu/libevent-2.0.so.5.1.9		    libevent-2.0-5
 usr/lib/i386-linux-gnu/libfdk-aac.so.2			    libfdk-aac2
 usr/lib/i386-linux-gnu/libfdk-aac.so.2.0.1		    libfdk-aac2
+usr/lib/i386-linux-gnu/libffi.so.6			    libffi6
+usr/lib/i386-linux-gnu/libffi.so.6.0.4			    libffi6
 usr/lib/i386-linux-gnu/libfusion-1.2.so.9		    libdirectfb-1.2-9
 usr/lib/i386-linux-gnu/libfusion-1.2.so.9.0.1		    libdirectfb-1.2-9
 usr/lib/i386-linux-gnu/libgnome-keyring.so.0		    libgnome-keyring0
@@ -1535,6 +1537,11 @@ usr/lib/python2.7/dist-packages/PIL/_imaging.so		    img2pdf-old
 usr/lib/python2.7/dist-packages/PIL/_imagingcms.so	    img2pdf-old
 usr/lib/python2.7/dist-packages/PIL/_imagingft.so	    img2pdf-old
 usr/lib/python2.7/dist-packages/PIL/_imagingmath.so	    img2pdf-old
+usr/lib/python2.7/dist-packages/PyGObject-3.30.4.egg-info/PKG-INFO obkey
+usr/lib/python2.7/dist-packages/PyGObject-3.30.4.egg-info/dependency_links.txt obkey
+usr/lib/python2.7/dist-packages/PyGObject-3.30.4.egg-info/not-zip-safe obkey
+usr/lib/python2.7/dist-packages/PyGObject-3.30.4.egg-info/requires.txt obkey
+usr/lib/python2.7/dist-packages/PyGObject-3.30.4.egg-info/top_level.txt obkey
 usr/lib/python2.7/dist-packages/PyGObject-3.36.0.egg-info/PKG-INFO obkey
 usr/lib/python2.7/dist-packages/PyGObject-3.36.0.egg-info/dependency_links.txt obkey
 usr/lib/python2.7/dist-packages/PyGObject-3.36.0.egg-info/not-zip-safe obkey
@@ -6037,6 +6044,8 @@ usr/share/doc/libevent-2.0-5/copyright			    libevent-2.0-5
 usr/share/doc/libfdk-aac2/changelog.Debian.gz		    libfdk-aac2
 usr/share/doc/libfdk-aac2/changelog.gz			    libfdk-aac2
 usr/share/doc/libfdk-aac2/copyright			    libfdk-aac2
+usr/share/doc/libffi6/changelog.Debian.gz		    libffi6
+usr/share/doc/libffi6/copyright				    libffi6
 usr/share/doc/libgnome-keyring-common/AUTHORS		    libgnome-keyring-common
 usr/share/doc/libgnome-keyring-common/NEWS.gz		    libgnome-keyring-common
 usr/share/doc/libgnome-keyring-common/README		    libgnome-keyring-common
