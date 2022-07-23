@@ -1,3 +1,5 @@
+bin/dash						    dash
+bin/sh							    dash
 etc/X11/Xsession.d/20slim_locale			    slim
 etc/X11/app-defaults/Chooser				    xdm
 etc/X11/app-defaults/Xvidtune				    x11-xserver-utils
@@ -560,7 +562,17 @@ opt/tmp/snapexit					    porteusbootscripts
 opt/tmp/snapmergepuppy					    porteusbootscripts
 opt/tmp/wmpoweroff					    porteusbootscripts
 opt/tmp/wmreboot					    porteusbootscripts
+root/.alsa-capture					    alsa-capture
+root/.alsacap/.asoundrc.base				    alsacapgui
+root/.alsacap/.asoundrc.capture				    alsacapgui
+root/.alsacap2/.asoundrc.base				    alsacapgui2
+root/.alsacap2/.asoundrc.capture0			    alsacapgui2
+root/.alsacap2/.asoundrc.capture1			    alsacapgui2
+root/.alsacap2/.asoundrc.capture2			    alsacapgui2
+root/.alsacap2/.asoundrc.capture3			    alsacapgui2
 root/.asoundrc						    peasymp3
+root/.asoundrc.base					    alsa-capture
+root/.asoundrc.capture					    alsa-capture
 root/.config/autostart/screener.desktop.bak		    screener
 root/.config/rox.sourceforge.net/MIME-types/application	    jwm-setup,jwmconf
 root/.config/rox.sourceforge.net/MIME-types/image_png	    jwm-setup,jwmconf
@@ -1208,6 +1220,8 @@ usr/lib/i386-linux-gnu/libbluray.so.1			    libbluray1
 usr/lib/i386-linux-gnu/libbluray.so.1.10.0		    libbluray1
 usr/lib/i386-linux-gnu/libcrypto.so.1.0.0		    libssl1.0.0
 usr/lib/i386-linux-gnu/libcrypto.so.1.0.2		    libssl1.0.2
+usr/lib/i386-linux-gnu/libcrystalhd.so.3		    libcrystalhd3
+usr/lib/i386-linux-gnu/libcrystalhd.so.3.6		    libcrystalhd3
 usr/lib/i386-linux-gnu/libdconf.so.0			    libdconf0
 usr/lib/i386-linux-gnu/libdconf.so.0.0.0		    libdconf0
 usr/lib/i386-linux-gnu/libdirect-1.2.so.9		    libdirectfb-1.2-9
@@ -1873,6 +1887,9 @@ usr/local/bin/CPUtemp.hlp				    cputemp
 usr/local/bin/QtWeb					    qtweb
 usr/local/bin/Readme_loadsfs-fuse-writesfs		    portablesfs-loadsfs-fuse
 usr/local/bin/SaveFolderBackup				    SaveFolderBackup
+usr/local/bin/alsa-capture				    alsa-capture
+usr/local/bin/alsacapgui				    alsacapgui
+usr/local/bin/alsacapgui2				    alsacapgui2
 usr/local/bin/alsamixertray				    alsamixer-tray
 usr/local/bin/apt2sfs					    apt2sfs
 usr/local/bin/apt2sfs-fullinst				    apt2sfs
@@ -5469,6 +5486,8 @@ usr/share/applications/Yalarm Alarm scheduler.desktop	    yalarm
 usr/share/applications/YouTube-Get.desktop		    youtube-get
 usr/share/applications/YouTube-Get2.desktop		    youtube-get2
 usr/share/applications/YouTube-Get3.desktop		    youtube-get3
+usr/share/applications/alsacap.desktop			    alsacapgui
+usr/share/applications/alsacap2.desktop			    alsacapgui2
 usr/share/applications/apt2sfs-fullinst.desktop		    apt2sfs
 usr/share/applications/apt2sfs.desktop			    apt2sfs
 usr/share/applications/audio-converter.desktop		    audio-converter
@@ -5818,6 +5837,7 @@ usr/share/bug/libdvdread4				    libdvdread4
 usr/share/bug/xvidcap/control				    xvidcap
 usr/share/cups/drv/hp/hpcups.drv			    hplip-print-scan
 usr/share/dbus-1/services/net.jarre_de_the.Xvidcap.service  xvidcap
+usr/share/debianutils/shells.d/dash			    dash
 usr/share/desktop-directories/dog-accessories.directory	    jwm-setup,jwmconf
 usr/share/desktop-directories/dog-development.directory	    jwm-setup,jwmconf
 usr/share/desktop-directories/dog-education.directory	    jwm-setup,jwmconf
@@ -5929,6 +5949,12 @@ usr/share/doc/conky/NEWS.Debian.gz			    conky
 usr/share/doc/conky/changelog.Debian.gz			    conky
 usr/share/doc/conky/changelog.gz			    conky
 usr/share/doc/conky/copyright				    conky
+usr/share/doc/dash/NEWS.Debian.gz			    dash
+usr/share/doc/dash/README.Debian.diet			    dash
+usr/share/doc/dash/README.source			    dash
+usr/share/doc/dash/changelog.Debian.gz			    dash
+usr/share/doc/dash/changelog.gz				    dash
+usr/share/doc/dash/copyright				    dash
 usr/share/doc/dillo/user_help.html			    dillo
 usr/share/doc/dmmediaconverter/changelog.gz		    dmmediaconverter
 usr/share/doc/dmmediaconverter/copyright		    dmmediaconverter
@@ -6027,6 +6053,8 @@ usr/share/doc/libcdio-paranoia1/copyright		    libcdio-paranoia1
 usr/share/doc/libcdio13/changelog.Debian.gz		    libcdio13
 usr/share/doc/libcdio13/changelog.gz			    libcdio13
 usr/share/doc/libcdio13/copyright			    libcdio13
+usr/share/doc/libcrystalhd3/changelog.Debian.gz		    libcrystalhd3
+usr/share/doc/libcrystalhd3/copyright			    libcrystalhd3
 usr/share/doc/libdconf0/NEWS.gz				    libdconf0
 usr/share/doc/libdconf0/changelog.Debian.gz		    libdconf0
 usr/share/doc/libdconf0/copyright			    libdconf0
@@ -8859,6 +8887,7 @@ usr/share/icons/oxygen/8x8				    oxygen-icon-theme-light
 usr/share/icons/oxygen/index.theme			    oxygen-icon-theme-light
 usr/share/icons/x-office-document.png			    evince
 usr/share/lintian/overrides/aufs-tools			    aufs-tools
+usr/share/lintian/overrides/dash			    dash
 usr/share/lintian/overrides/epdfview			    epdfview
 usr/share/lintian/overrides/firefox-esr			    firefox-esr
 usr/share/lintian/overrides/libdirectfb-1.2-9		    libdirectfb-1.2-9
@@ -9258,6 +9287,7 @@ usr/share/man/man1/auibusy.1.gz				    aufs-tools
 usr/share/man/man1/bacon.1.gz				    bacon
 usr/share/man/man1/ceni.1p.gz				    ceni
 usr/share/man/man1/conky.1.gz				    conky-all,conky-std,conky-cli
+usr/share/man/man1/dash.1.gz				    dash
 usr/share/man/man1/dillo.1.gz				    dillo
 usr/share/man/man1/emelfm2.1				    emelfm2
 usr/share/man/man1/empty.1.gz				    empty-expect
@@ -9279,6 +9309,7 @@ usr/share/man/man1/rox.1.gz				    rox-filer
 usr/share/man/man1/roxterm-config.1.gz			    roxterm-common
 usr/share/man/man1/roxterm.1.gz				    roxterm-common
 usr/share/man/man1/sessreg.1.gz				    x11-xserver-utils
+usr/share/man/man1/sh.1.gz				    dash
 usr/share/man/man1/showrgb.1.gz				    x11-xserver-utils
 usr/share/man/man1/startx.1.gz				    xinit
 usr/share/man/man1/straw-viewer.1p			    straw-viewer
@@ -9403,6 +9434,7 @@ usr/share/menu/conky-std				    conky-std
 usr/share/menu/conkyclock				    conkyclock
 usr/share/menu/conkyclock2				    conkyclock2
 usr/share/menu/conv-sfs					    edit-sfs-pcmanfm,edit-sfs-thunar
+usr/share/menu/dash					    dash
 usr/share/menu/debdog-advert-blocker			    debdog-advert-blocker
 usr/share/menu/debdog-full-install			    debdoginstallscripts
 usr/share/menu/debdog-install				    debdoginstallscripts
@@ -9661,6 +9693,8 @@ usr/share/pixmaps/PackIt.png				    pack-it
 usr/share/pixmaps/QtWeb.png				    qtweb
 usr/share/pixmaps/UExtract.png				    uextract
 usr/share/pixmaps/abc.png				    font-viewer
+usr/share/pixmaps/acap.png				    alsacapgui
+usr/share/pixmaps/acap2.png				    alsacapgui2
 usr/share/pixmaps/alarm_142x164.png			    yalarm
 usr/share/pixmaps/alsamixertray.png			    alsamixer-tray
 usr/share/pixmaps/application-x-squashfs.png		    sfs-get-smokey-get
