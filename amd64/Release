@@ -6,24 +6,24 @@ Codename: buster
 Architectures: i386
 Components: main
 Description: DebianDog repository
-Date: Sat, 04 Feb 2023 17:52:25 +0000
+Date: Sat, 04 Feb 2023 18:08:47 +0000
 MD5Sum:
  33714b781360f973abc9920e06188b5a           387151 Packages
- 1a035b994a57efc9df81f77cba423c41           130090 Packages.gz
- 3265bbf35eee1223eac80c18906f3c3f              186 Release
- 1a035b994a57efc9df81f77cba423c41           130090 Translation-en.gz
+ 5f4589e485baf916bec36e40f70d9b35           130090 Packages.gz
+ 28921519afcbef1c07e53a9c7e878002              186 Release
+ 5f4589e485baf916bec36e40f70d9b35           130090 Translation-en.gz
 SHA1:
  3b142153e27d6ba668adc2ae7ace371a6faad796           387151 Packages
- fd0d4960437b3a2ad8d6710845eb5b41911955cf           130090 Packages.gz
- bcfd4df0b395ce10fb0d08e786e8e1d504bbe7cc              186 Release
- fd0d4960437b3a2ad8d6710845eb5b41911955cf           130090 Translation-en.gz
+ 381666488b882f72fb9e9f7b1ad869acb1666743           130090 Packages.gz
+ 75b1ba22d87c5234c33a91e4c5459fa5eee00225              186 Release
+ 381666488b882f72fb9e9f7b1ad869acb1666743           130090 Translation-en.gz
 SHA256:
  f8e180bfc30e4f0896a9f9ae2b962a2649535d3c9ccb574b234b340a20007b02           387151 Packages
- 6f86de49e98758eb25bfc307c62e78580b426e0dceb45f0f655449ffcdb15e09           130090 Packages.gz
- f3282a350728199cbb4eb235d89e31cc71f2d49bd1171d1dbcb912a05b74621e              186 Release
- 6f86de49e98758eb25bfc307c62e78580b426e0dceb45f0f655449ffcdb15e09           130090 Translation-en.gz
+ a790512169f7eb2575f966db8af2df4f1259b9b3012884fc496bc53ad7e1023f           130090 Packages.gz
+ 1e3b9a3f4a40ba3ceba54af710f948fe260be2b2424d241c1c701f8d3b756d80              186 Release
+ a790512169f7eb2575f966db8af2df4f1259b9b3012884fc496bc53ad7e1023f           130090 Translation-en.gz
 SHA512:
  4ef8c45951e4d2c30b84a0a6c0b8e9ec56365d49bbacd4e75fe84da79c806bdf07b94242ecfbb1fe54c6bb7f899c9a7a2c00c074eb7d80d8ddedf57e08f62d36           387151 Packages
- 1fd4f04e362cdaabd05cd11650490c5ca868d5ea85be3647d0847965c7ce363014e77090c96b23871fa62c28807a4eca1c72ea60d69889051f213ec52d429e9e           130090 Packages.gz
- 11fefc9ffdbafdd63723ca3e7a2fc2fc736976bb16c707833283f647e65c005a1f2a0123d5d8589cf265b74ab98d10f17a3d7604330a1c3a6d5ef69b8a30edbe              186 Release
- 1fd4f04e362cdaabd05cd11650490c5ca868d5ea85be3647d0847965c7ce363014e77090c96b23871fa62c28807a4eca1c72ea60d69889051f213ec52d429e9e           130090 Translation-en.gz
+ 77799bae25dbbc411a0ce0dcd5eee5ccf7218edc77005aadbd1699c73ac298a7dc6b3a83e8226c9d3953dca3b14f063a47eaafd9f0c02eba100a0fe4a76e55bc           130090 Packages.gz
+ e1d5d870379bbe38d12cb58b97c9e4567dab811f986b7796ab01dcd958e319784193115df87cb9d63e5752e6408435cc0683bbf5a29ab155f250877aeb850ca4              186 Release
+ 77799bae25dbbc411a0ce0dcd5eee5ccf7218edc77005aadbd1699c73ac298a7dc6b3a83e8226c9d3953dca3b14f063a47eaafd9f0c02eba100a0fe4a76e55bc           130090 Translation-en.gz
