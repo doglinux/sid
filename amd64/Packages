@@ -94,6 +94,21 @@ SHA256: 69327dbf781bbbb4b899163c5ce28fd1c1f3670d45797a9bed6649cde1442c9b
 SHA512: e467e05f7b90e54238c37dc5a7bc099c8887ac125d28b3f9f6f983179e910c19c10761826698d198d8d809bf0a9063653541c3e20c77033d5393125f5f6ebb19
 Description: Volume control for system tray
 
+Package: apt-fast
+Architecture: all
+Version: 1.0
+Priority: optional
+Section: base
+Maintainer: fredx181
+Depends: aria2, apt
+Filename: ./apt-fast_1.0_all.deb
+Size: 9260
+MD5sum: 8243543fdc71643e5912c72b2d5b8ff2
+SHA1: 861cc86bd68e4e9e0bfbe40586d5241385da6a5e
+SHA256: 5fa014d97ef54e3ab2f67cc033e8587e852f564079796ddd6b64e20e06516f7f
+SHA512: a1d00b15dde5654d3a2cc8f54b94e0040097777d160248d510eac4f58c4cf0aab1efa501948ee92a5ab493b4c60e6b9f604a68f3b7876dd94644e5645ca6d291
+Description: faster download with apt
+
 Package: apt2sfs
 Architecture: amd64
 Version: 1.1.2
@@ -1079,32 +1094,6 @@ SHA1: bae467bcfd146de782107b9c7f10879b722f6b96
 SHA256: dc9a625ca61602b9ae37d98a4e238476bf79c02c2808d01ce688b750f7864b3c
 SHA512: 04ad1f5294cb25acf0884c96d1920d26cf933d8b158d9582ae218f916ff33aad3cb38322ba43f138165fa3c73c5e4c298336e33d0733f463d557aff081bccc79
 Description: Dancing Letters Generator (forum and HTML)
-
-Package: dash
-Architecture: amd64
-Version: 1:0.5.11+git20210903+057cd650a4ed-8
-Multi-Arch: foreign
-Priority: required
-Essential: yes
-Section: shells
-Maintainer: Andrej Shadura <andrewsh@debian.org>
-Installed-Size: 214
-Pre-Depends: libc6 (>= 2.33)
-Depends: debianutils (>= 5.6-0.1), dpkg (>= 1.19.1)
-Filename: ./dash_0.5.11+git20210903+057cd650a4ed-8_amd64.deb
-Size: 115796
-MD5sum: 832779db54e208eab6ee2377fb13ff34
-SHA1: b7598d7a57f8c36f001d469b4a24d0420956801d
-SHA256: aaaff412c3f2bd774259f781cf619658b7dba4fab9a23478ac6b5596d805a6dd
-SHA512: e5d15d3284a4712d85465a320184504d77fd9bb6bfe20c3d94b7bd405aade5fff0ad6d6c57f00de1d88f90d0388f7110790acf3d424d617e72c74237c7fdf585
-Homepage: http://gondor.apana.org.au/~herbert/dash/
-Description: POSIX-compliant shell
- The Debian Almquist Shell (dash) is a POSIX-compliant shell derived
- from ash.
- .
- Since it executes scripts faster than bash, and has fewer library
- dependencies (making it more robust against software or hardware
- failures), it is used as the default system shell on Debian systems.
 
 Package: deadbeef-static
 Architecture: amd64

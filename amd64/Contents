@@ -1,12 +1,12 @@
-bin/dash						    dash
 bin/findmnt						    mount
 bin/mount						    mount
-bin/sh							    dash
 bin/umount						    mount
 bin/usleep						    pburn
 etc/X11/app-defaults/Xvidtune				    x11-xserver-utils
 etc/X11/openbox						    openbox
 etc/alsa/conf.d/20-bluealsa.conf			    bluealsa
+etc/apt-fast.conf					    apt-fast
+etc/bash_completion.d/apt-fast				    apt-fast
 etc/dbus-1/system.d/bluealsa.conf			    bluealsa
 etc/default/aufs					    aufs-tools
 etc/dhcpcd_dropwait_secs				    frisbee
@@ -5756,6 +5756,7 @@ usr/local/bin/alsa-capture				    alsa-capture
 usr/local/bin/alsacapgui				    alsacapgui
 usr/local/bin/alsacapgui2				    alsacapgui2
 usr/local/bin/alsamixertray				    alsamixer-tray
+usr/local/bin/apt-fast					    apt-fast
 usr/local/bin/apt2sfs					    apt2sfs
 usr/local/bin/apt2sfs-fullinst				    apt2sfs
 usr/local/bin/audio-converter				    audio-converter
@@ -9122,7 +9123,6 @@ usr/share/bug/libgbm1/control				    libgbm1
 usr/share/bug/libgbm1/script				    libgbm1
 usr/share/cups/drv/hp/hpcups.drv			    hplip-print-scan
 usr/share/dbus-1/services/org.gnome.GConf.service	    gconf-service
-usr/share/debianutils/shells.d/dash			    dash
 usr/share/desktop-directories/dog-accessories.directory	    jwm-setup-dd64,jwmconf,jwm-setup
 usr/share/desktop-directories/dog-development.directory	    jwm-setup-dd64,jwmconf,jwm-setup
 usr/share/desktop-directories/dog-education.directory	    jwm-setup-dd64,jwmconf,jwm-setup
@@ -9178,12 +9178,6 @@ usr/share/doc/bluealsa/changelog.gz			    bluealsa
 usr/share/doc/bluealsa/copyright			    bluealsa
 usr/share/doc/ceni/changelog.gz				    ceni
 usr/share/doc/ceni/copyright				    ceni
-usr/share/doc/dash/NEWS.Debian.gz			    dash
-usr/share/doc/dash/README.Debian.diet			    dash
-usr/share/doc/dash/README.source			    dash
-usr/share/doc/dash/changelog.Debian.gz			    dash
-usr/share/doc/dash/changelog.gz				    dash
-usr/share/doc/dash/copyright				    dash
 usr/share/doc/emelfm2/ACTIONS				    emelfm2
 usr/share/doc/emelfm2/CONFIGURATION			    emelfm2
 usr/share/doc/emelfm2/CREDITS				    emelfm2
@@ -10877,7 +10871,6 @@ usr/share/icons/hicolor/scalable/apps/leafpad.svg	    leafpad
 usr/share/icons/hicolor/scalable/apps/roxterm.svg	    roxterm-common
 usr/share/info/wget.info.gz				    wget
 usr/share/lintian/overrides/aufs-tools			    aufs-tools
-usr/share/lintian/overrides/dash			    dash
 usr/share/lintian/overrides/epdfview			    epdfview
 usr/share/lintian/overrides/firefox-esr			    firefox-esr
 usr/share/lintian/overrides/giblib1			    giblib1
@@ -11380,7 +11373,6 @@ usr/share/man/man1/auchk.1.gz				    aufs-tools
 usr/share/man/man1/auibusy.1.gz				    aufs-tools
 usr/share/man/man1/bacon.1.gz				    bacon
 usr/share/man/man1/ceni.1p.gz				    ceni
-usr/share/man/man1/dash.1.gz				    dash
 usr/share/man/man1/emelfm2.1				    emelfm2
 usr/share/man/man1/empty.1.gz				    empty-expect
 usr/share/man/man1/epdfview.1.gz			    epdfview
@@ -11415,7 +11407,6 @@ usr/share/man/man1/roxterm-config.1.gz			    roxterm-common
 usr/share/man/man1/roxterm.1.gz				    roxterm-common
 usr/share/man/man1/sct.1.gz				    sct
 usr/share/man/man1/sessreg.1.gz				    x11-xserver-utils
-usr/share/man/man1/sh.1.gz				    dash
 usr/share/man/man1/showrgb.1.gz				    x11-xserver-utils
 usr/share/man/man1/straw-viewer.1p			    straw-viewer
 usr/share/man/man1/thunar-settings.1.gz			    thunar
@@ -11532,7 +11523,6 @@ usr/share/menu/ceni					    ceni
 usr/share/menu/conkyclock				    conkyclock
 usr/share/menu/conkyclock2				    conkyclock2
 usr/share/menu/conv-sfs					    edit-sfs-pcmanfm,edit-sfs-thunar
-usr/share/menu/dash					    dash
 usr/share/menu/desktop_view_edit			    desktop-editor
 usr/share/menu/dogradio					    dogradio
 usr/share/menu/domycommand				    domycommand

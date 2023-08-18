@@ -1,5 +1,3 @@
-bin/dash						    dash
-bin/sh							    dash
 etc/X11/Xsession.d/20slim_locale			    slim
 etc/X11/app-defaults/Chooser				    xdm
 etc/X11/app-defaults/Xvidtune				    x11-xserver-utils
@@ -18,6 +16,8 @@ etc/X11/xdm/xdm-config					    xdm
 etc/X11/xdm/xdm.options					    xdm
 etc/X11/xinit/xinitrc					    xinit
 etc/X11/xinit/xserverrc					    xinit
+etc/apt-fast.conf					    apt-fast
+etc/bash_completion.d/apt-fast				    apt-fast
 etc/conky/conky.conf					    conky-all,conky-std,conky-cli
 etc/conky/conky_no_x11.conf				    conky-all,conky-std,conky-cli
 etc/daemons.conf					    wifibox-dhcpcd,wifibox
@@ -2696,6 +2696,7 @@ usr/local/bin/alsa-capture				    alsa-capture
 usr/local/bin/alsacapgui				    alsacapgui
 usr/local/bin/alsacapgui2				    alsacapgui2
 usr/local/bin/alsamixertray				    alsamixer-tray
+usr/local/bin/apt-fast					    apt-fast
 usr/local/bin/apt2sfs					    apt2sfs
 usr/local/bin/apt2sfs-fullinst				    apt2sfs
 usr/local/bin/audio-converter				    audio-converter
@@ -6651,7 +6652,6 @@ usr/share/bug/xvidcap/control				    xvidcap
 usr/share/cups/drv/hp/hpcups.drv			    hplip-print-scan
 usr/share/dbus-1/services/net.jarre_de_the.Xvidcap.service  xvidcap
 usr/share/dbus-1/services/org.gnome.GConf.service	    gconf-service
-usr/share/debianutils/shells.d/dash			    dash
 usr/share/desktop-directories/dog-accessories.directory	    jwm-setup,jwmconf
 usr/share/desktop-directories/dog-development.directory	    jwm-setup,jwmconf
 usr/share/desktop-directories/dog-education.directory	    jwm-setup,jwmconf
@@ -6763,12 +6763,6 @@ usr/share/doc/conky/NEWS.Debian.gz			    conky
 usr/share/doc/conky/changelog.Debian.gz			    conky
 usr/share/doc/conky/changelog.gz			    conky
 usr/share/doc/conky/copyright				    conky
-usr/share/doc/dash/NEWS.Debian.gz			    dash
-usr/share/doc/dash/README.Debian.diet			    dash
-usr/share/doc/dash/README.source			    dash
-usr/share/doc/dash/changelog.Debian.gz			    dash
-usr/share/doc/dash/changelog.gz				    dash
-usr/share/doc/dash/copyright				    dash
 usr/share/doc/dillo/user_help.html			    dillo
 usr/share/doc/dmmediaconverter/changelog.gz		    dmmediaconverter
 usr/share/doc/dmmediaconverter/copyright		    dmmediaconverter
@@ -9772,7 +9766,6 @@ usr/share/icons/oxygen/8x8				    oxygen-icon-theme-light
 usr/share/icons/oxygen/index.theme			    oxygen-icon-theme-light
 usr/share/icons/x-office-document.png			    evince
 usr/share/lintian/overrides/aufs-tools			    aufs-tools
-usr/share/lintian/overrides/dash			    dash
 usr/share/lintian/overrides/epdfview			    epdfview
 usr/share/lintian/overrides/firefox-esr			    firefox-esr
 usr/share/lintian/overrides/giblib1			    giblib1
@@ -10267,7 +10260,6 @@ usr/share/man/man1/auibusy.1.gz				    aufs-tools
 usr/share/man/man1/bacon.1.gz				    bacon
 usr/share/man/man1/ceni.1p.gz				    ceni
 usr/share/man/man1/conky.1.gz				    conky-all,conky-std,conky-cli
-usr/share/man/man1/dash.1.gz				    dash
 usr/share/man/man1/dillo.1.gz				    dillo
 usr/share/man/man1/emelfm2.1				    emelfm2
 usr/share/man/man1/empty.1.gz				    empty-expect
@@ -10302,7 +10294,6 @@ usr/share/man/man1/roxterm-config.1.gz			    roxterm-common
 usr/share/man/man1/roxterm.1.gz				    roxterm-common
 usr/share/man/man1/sct.1.gz				    sct
 usr/share/man/man1/sessreg.1.gz				    x11-xserver-utils
-usr/share/man/man1/sh.1.gz				    dash
 usr/share/man/man1/showrgb.1.gz				    x11-xserver-utils
 usr/share/man/man1/startx.1.gz				    xinit
 usr/share/man/man1/straw-viewer.1p			    straw-viewer
@@ -10427,7 +10418,6 @@ usr/share/menu/conky-std				    conky-std
 usr/share/menu/conkyclock				    conkyclock
 usr/share/menu/conkyclock2				    conkyclock2
 usr/share/menu/conv-sfs					    edit-sfs-pcmanfm,edit-sfs-thunar
-usr/share/menu/dash					    dash
 usr/share/menu/debdog-advert-blocker			    debdog-advert-blocker
 usr/share/menu/debdog-full-install			    debdoginstallscripts
 usr/share/menu/debdog-install				    debdoginstallscripts
