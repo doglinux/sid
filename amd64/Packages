@@ -1749,6 +1749,31 @@ SHA256: 2daec92bdcd35b328a7e2107695a7c4f9dee9b83e3025b3b02ed3b37741590a3
 SHA512: 389994c6cbe5d330eacee4126475796133aa7046b2af030bf4def85433eb4cd9dbe5aae1e7850dbaace93fa411e20bb551c7245bde14bb674d148b25a6c42316
 Description: squashfs editor, converter
 
+Package: elogind
+Architecture: amd64
+Version: 1:252.9-1
+Multi-Arch: foreign
+Priority: optional
+Section: admin
+Origin: Devuan
+Maintainer: Mark Hindley <mark@hindley.org.uk>
+Installed-Size: 2514
+Pre-Depends: debconf, init-system-helpers (>= 1.54~)
+Depends: libacl1 (>= 2.2.23), libc6 (>= 2.34), libcap2 (>= 1:2.10), libmount1 (>= 2.19.1), libpam0g (>= 0.99.7.1), libselinux1 (>= 3.1~), libudev1, libelogind0 (= 1:252.9-1), dbus (>= 1.9.14)
+Recommends: libpam-elogind, polkitd
+Breaks: udev (<< 1:3.2.2+devuan1)
+Replaces: udev (<< 1:3.2.2+devuan1)
+Filename: ./elogind_252.9-1_amd64.deb
+Size: 717268
+MD5sum: 2b9d0f565436644ce750b7d7f9743144
+SHA1: d2bc01c3cc9344e02872a56cb3c85bf1fe1d5888
+SHA256: dbfb960061efdcfe9708d5a8fc934a681a956d00d88dc8ca20affb97b5d42d6b
+SHA512: 4c46afa900caf2ad512d5d1836dfff6408e2ef3158133e3e7dd2571220332e5c9f4275c35c60c515dc25b37ef3f7543c7f04bda4509b02fc10d46931cffcb5a7
+Homepage: https://github.com/elogind/elogind
+Description: user, seat and session management daemon
+ elogind is a session management daemon extracted from systemd project's
+ logind
+
 Package: emelfm2
 Architecture: amd64
 Version: 0.9.1-1~trusty~ppa1
@@ -3762,6 +3787,55 @@ Description: library for reading DVDs
  decrypt sections of the DVD as necessary. libdvdcss needs to be installed from
  third-party repositories (see README.css), it's not included in Debian.
 
+Package: libelogind-compat
+Architecture: amd64
+Version: 252.9-1
+Multi-Arch: same
+Priority: optional
+Section: libs
+Source: elogind
+Origin: Devuan
+Maintainer: Mark Hindley <mark@hindley.org.uk>
+Installed-Size: 18
+Provides: libsystemd0 (= 500:254)
+Depends: libelogind0
+Conflicts: libsystemd0
+Breaks: libelogind0 (<< 246.10-4~)
+Replaces: libsystemd0
+Filename: ./libelogind-compat_252.9-1_amd64.deb
+Size: 5536
+MD5sum: f2cec046c34225c24f80786d0447fdd7
+SHA1: 7c09a7375ca547077561d77b2c1168e17045bdb4
+SHA256: c03ed22f88933355604ad312c021a7c9eceb0729eed1f1c5e83b760834843c6d
+SHA512: 81e6ece7b6ad80deb42f050485b60dc68968186c2a7d5b410a5df7c66448a93fbbc351861e4eec03376ced45e729092e1d09f1da5afa26b0cb05191eb8d2452f
+Homepage: https://github.com/elogind/elogind
+Description: user, seat and session management library compatibility
+ The libelogind0 library is ABI compatible with libsystemd0. This package
+ provides the necessary symlinks to allow binaries linked against libsystemd0
+ to work with libelogind0. For full details of the compatibility see
+ README.Debian.
+
+Package: libelogind0
+Architecture: amd64
+Version: 1:252.9-1
+Multi-Arch: same
+Priority: optional
+Section: libs
+Source: elogind
+Origin: Devuan
+Maintainer: Mark Hindley <mark@hindley.org.uk>
+Installed-Size: 730
+Depends: libc6 (>= 2.34), libcap2 (>= 1:2.10)
+Filename: ./libelogind0_252.9-1_amd64.deb
+Size: 265784
+MD5sum: 91813263104a16d0af455546de66afac
+SHA1: f1e319dbf36eb0b70880637a7d41f1eea1fa2493
+SHA256: 3110d07c91fc33bd8768bf3b4aa5c18234c29b1f056b140701dc53c76dc855e4
+SHA512: 667a2d219f4fd10276dc928292e9f714bbc77d3998535662b0db937e2f71c609fd08623e2712b65a1152fa260ac312bb63f62aa4a7543372d56799326b13eca7
+Homepage: https://github.com/elogind/elogind
+Description: user, seat and session management library
+ This library provides runtime access to elogind session management.
+
 Package: libesd0
 Architecture: amd64
 Version: 0.2.41-11
@@ -4324,6 +4398,31 @@ Description: library for dealing with netlink sockets
  This is a library for applications dealing with netlink sockets.
  The library provides an interface for raw netlink messaging and various
  netlink family specific interfaces.
+
+Package: libpam-elogind
+Architecture: amd64
+Version: 1:252.9-1
+Multi-Arch: same
+Priority: optional
+Section: admin
+Source: elogind
+Origin: Devuan
+Maintainer: Mark Hindley <mark@hindley.org.uk>
+Installed-Size: 526
+Provides: default-logind, libpam-systemd, logind
+Depends: libc6 (>= 2.34), libcap2 (>= 1:2.10), libpam0g (>= 0.99.7.1), elogind (= 1:252.9-1), libelogind-compat, libpam-runtime
+Conflicts: libpam-ck-connector
+Breaks: libpam-systemd
+Replaces: libpam-systemd
+Filename: ./libpam-elogind_252.9-1_amd64.deb
+Size: 198952
+MD5sum: 36e151409364272bb03dc2a3bc87b88c
+SHA1: 15da9e8577415ce71f1d81b63ddbd4018ff5030d
+SHA256: 45c1a97fb44890b39fa03ba90ea8c24785a26aeb5f92de77d9d7b4892b1a5cdc
+SHA512: 75fd8a59b58d264fd2ddae80ef5da08f18b122b0d5a8cd9a61c890b4590b8c7f478e346686aad8cf89cf61c0c84f890714fa37c23846f44e2413694572dbac11
+Homepage: https://github.com/elogind/elogind
+Description: elogind PAM module
+ Plugable Authentication Module to register a session with elogind
 
 Package: libpango1.0-0
 Architecture: amd64
@@ -7950,6 +8049,22 @@ MD5sum: b2f5da769206582c1a59cc8dd9779d20
 SHA1: b6559f622e8b7a72a2f1930abb1523f7f012991d
 SHA256: 6423a60a44f8fbccfd43fb19a1ac6570304437681f5b7544d1c8b65038ec7392
 SHA512: 449b40d573389c3f8701af71d2d2aced8481554b71f83dd38774cfcaf801b2627ba619b1ad6a265ea3d4298a863f3c3ffe1933c2f25b3dd76c5b45f117aecc92
+Description: Switch from standard to static repository (from snapshot.debian)
+
+Package: repo-conf
+Architecture: amd64
+Version: 1.0.4
+Priority: optional
+Section: utilities
+Maintainer: fredx181
+Installed-Size: 42
+Depends: apt, yad
+Filename: ./repo-conf_1.0.4_amd64.deb
+Size: 4708
+MD5sum: 610b61cc5be5f2ade6b1cbd19419121c
+SHA1: c79145659aaed614c7ce3a1207016410b78fccff
+SHA256: e25901a51adff638ee5c7d081881686edbead26ff6b7ef6aeccc96d7bce81cc6
+SHA512: 44fa12a65a1241955703ebcc404612ac7fd156bd71463163b953474e0a924e050e092d4889e8defe2195e2944bf63e82eea2cc2d44e8f1bbc75de764537f4547
 Description: Switch from standard to static repository (from snapshot.debian)
 
 Package: resize-save-file

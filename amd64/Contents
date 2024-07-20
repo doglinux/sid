@@ -1,4 +1,6 @@
+bin/elogind-inhibit					    elogind
 bin/findmnt						    mount
+bin/loginctl						    elogind
 bin/mount						    mount
 bin/umount						    mount
 bin/usleep						    pburn
@@ -15,6 +17,8 @@ etc/domycommand/cmd_lists/CMD1_combo			    domycommand
 etc/domycommand/domycommand_default.rc			    domycommand
 etc/domyfile/cmd_lists/CMD1_combo			    domyfile
 etc/domyfile/domyfile_default.rc			    domyfile
+etc/elogind/logind.conf					    elogind
+etc/elogind/sleep.conf					    elogind
 etc/esound/esd.conf					    esound-common
 etc/firefox-esr/firefox-esr.js				    firefox-esr
 etc/frisbee/dhcpcd.conf					    frisbee
@@ -26,6 +30,7 @@ etc/gftp/gftprc						    gftp-common
 etc/hostapd.conf.open					    wlanmaker
 etc/hostapd.conf.wpa2					    wlanmaker
 etc/hp/hplip.conf					    hplip-print-scan
+etc/init.d/elogind					    elogind
 etc/init.d/firewall-ng.sh				    firewall-ng
 etc/init.d/firewall.sh					    peasyfwmon
 etc/init.d/frisbee					    frisbee
@@ -35,6 +40,7 @@ etc/init.d/sfsunload					    sfsload
 etc/init.d/start-pup-volume-monitor			    pup-volume-monitor
 etc/init.d/start-tzupdate				    tzupdate
 etc/menu-methods/openbox				    openbox
+etc/pam.d/elogind-user					    libpam-elogind
 etc/pavrecord/.pavrecordrc				    pavrecord
 etc/ppp/chatscripts/gprs-connect-chat			    frisbee
 etc/ppp/chatscripts/gprs-disconnect-chat		    frisbee
@@ -156,14 +162,28 @@ home/puppy/startup-jwm					    jwm-setup-dd64,jwmconf,jwm-setup
 index.html						    pack-it
 lib/dhcpcd/dhcpcd-hooks					    frisbee
 lib/dhcpcd/dhcpcd-run-hooks				    frisbee
+lib/elogind/elogind					    elogind
+lib/elogind/elogind-cgroups-agent			    elogind
+lib/elogind/elogind-uaccess-command			    elogind
+lib/elogind/system-shutdown/.keep_dir			    elogind
+lib/elogind/system-sleep/.keep_dir			    elogind
 lib/systemd/system/bluealsa.service			    bluealsa
 lib/udev/rules.d/60-bluealsa.rules			    bluealsa
+lib/udev/rules.d/70-power-switch.rules			    elogind
+lib/udev/rules.d/70-uaccess.rules			    elogind
+lib/udev/rules.d/71-seat.rules				    elogind
+lib/udev/rules.d/73-seat-late.rules			    elogind
+lib/x86_64-linux-gnu/elogind/libelogind-shared-252.9.so	    elogind
+lib/x86_64-linux-gnu/libelogind.so.0			    libelogind0
+lib/x86_64-linux-gnu/libelogind.so.0.35.0		    libelogind0
 lib/x86_64-linux-gnu/libncurses.so.5			    libncurses5
 lib/x86_64-linux-gnu/libncurses.so.5.9			    libncurses5
 lib/x86_64-linux-gnu/libpng12.so.0			    libpng12-0
 lib/x86_64-linux-gnu/libpng12.so.0.50.0			    libpng12-0
+lib/x86_64-linux-gnu/libsystemd.so.0			    libelogind-compat
 lib/x86_64-linux-gnu/libtinfo.so.5			    libtinfo5
 lib/x86_64-linux-gnu/libtinfo.so.5.9			    libtinfo5
+lib/x86_64-linux-gnu/security/pam_elogind.so		    libpam-elogind
 opt/apps/make-deb-package/.DirIcon			    makedebpackage
 opt/apps/make-deb-package/AppInfo.xml			    makedebpackage
 opt/apps/make-deb-package/AppRun			    makedebpackage
@@ -430,7 +450,9 @@ opt/docs/pictures/fisherman.jpg				    jwm-setup
 opt/docs/portablesfs-chroot.template			    portablesfs-loadsfs-fuse
 opt/docs/portablesfs.template				    portablesfs-loadsfs-fuse
 opt/docs/sources.list.snap				    repo-conf
+opt/docs/sources.list.snapsd				    repo-conf
 opt/docs/sources.list.stand				    repo-conf
+opt/docs/sources.list.standsd				    repo-conf
 opt/jwm/jwm						    jwm-setup,jwmconf
 opt/jwm/jwm-debdog					    jwm-setup,jwmconf
 opt/stream2chromecast/LICENSE				    stream2chromecast
@@ -678,6 +700,7 @@ usr/bin/bacon.sh					    bacon
 usr/bin/bacongui					    bacon
 usr/bin/bluealsa					    bluealsa,bt4stretch
 usr/bin/bluealsa-aplay					    bluealsa,bt4stretch
+usr/bin/busctl						    elogind
 usr/bin/cddetect					    pburn
 usr/bin/cddetect_quick					    pburn
 usr/bin/cdrecord					    pburn
@@ -9146,6 +9169,8 @@ usr/share/azpainter/tr/ru.mtr				    azpainter
 usr/share/azpainter/tr/uk.mtr				    azpainter
 usr/share/azpainter/tr/zh_CN.mtr			    azpainter
 usr/share/backgrounds/greybird.svg			    greybird-theme-dd-stretch
+usr/share/bash-completion/completions/busctl		    elogind
+usr/share/bash-completion/completions/loginctl		    elogind
 usr/share/binfmts/python2.7				    python2.7-minimal
 usr/share/bug/firefox-esr/control			    firefox-esr
 usr/share/bug/firefox-esr/presubj			    firefox-esr
@@ -9155,6 +9180,8 @@ usr/share/bug/libgbm1/control				    libgbm1
 usr/share/bug/libgbm1/script				    libgbm1
 usr/share/cups/drv/hp/hpcups.drv			    hplip-print-scan
 usr/share/dbus-1/services/org.gnome.GConf.service	    gconf-service
+usr/share/dbus-1/system-services/org.freedesktop.login1.service elogind
+usr/share/dbus-1/system.d/org.freedesktop.login1.conf	    elogind
 usr/share/desktop-directories/dog-accessories.directory	    jwm-setup-dd64,jwmconf,jwm-setup
 usr/share/desktop-directories/dog-development.directory	    jwm-setup-dd64,jwmconf,jwm-setup
 usr/share/desktop-directories/dog-education.directory	    jwm-setup-dd64,jwmconf,jwm-setup
@@ -9213,6 +9240,9 @@ usr/share/doc/ceni/copyright				    ceni
 usr/share/doc/conky/NEWS.Debian.gz			    conky
 usr/share/doc/conky/changelog.Debian.gz			    conky
 usr/share/doc/conky/copyright				    conky
+usr/share/doc/elogind/README.md.gz			    elogind
+usr/share/doc/elogind/changelog.Debian.gz		    elogind
+usr/share/doc/elogind/copyright				    elogind
 usr/share/doc/emelfm2/ACTIONS				    emelfm2
 usr/share/doc/emelfm2/CONFIGURATION			    emelfm2
 usr/share/doc/emelfm2/CREDITS				    emelfm2
@@ -9371,6 +9401,11 @@ usr/share/doc/libdvdread4/README.css			    libdvdread4
 usr/share/doc/libdvdread4/changelog.Debian.gz		    libdvdread4
 usr/share/doc/libdvdread4/changelog.gz			    libdvdread4
 usr/share/doc/libdvdread4/copyright			    libdvdread4
+usr/share/doc/libelogind-compat/README.Debian		    libelogind-compat
+usr/share/doc/libelogind-compat/changelog.Debian.gz	    libelogind-compat
+usr/share/doc/libelogind-compat/copyright		    libelogind-compat
+usr/share/doc/libelogind0/changelog.Debian.gz		    libelogind0
+usr/share/doc/libelogind0/copyright			    libelogind0
 usr/share/doc/libesd0					    libesd0
 usr/share/doc/libevent-2.0-5/changelog.Debian.gz	    libevent-2.0-5
 usr/share/doc/libevent-2.0-5/changelog.gz		    libevent-2.0-5
@@ -9448,6 +9483,8 @@ usr/share/doc/libnettle4/copyright			    libnettle4
 usr/share/doc/libnl1/changelog.Debian.gz		    libnl1
 usr/share/doc/libnl1/changelog.gz			    libnl1
 usr/share/doc/libnl1/copyright				    libnl1
+usr/share/doc/libpam-elogind/changelog.Debian.gz	    libpam-elogind
+usr/share/doc/libpam-elogind/copyright			    libpam-elogind
 usr/share/doc/libpango1.0-0/changelog.Debian.gz		    libpango1.0-0
 usr/share/doc/libpango1.0-0/changelog.gz		    libpango1.0-0
 usr/share/doc/libpango1.0-0/copyright			    libpango1.0-0
@@ -10918,6 +10955,7 @@ usr/share/icons/hicolor/scalable/apps/leafpad.svg	    leafpad
 usr/share/icons/hicolor/scalable/apps/roxterm.svg	    roxterm-common
 usr/share/info/wget.info.gz				    wget
 usr/share/lintian/overrides/aufs-tools			    aufs-tools
+usr/share/lintian/overrides/elogind			    elogind
 usr/share/lintian/overrides/epdfview			    epdfview
 usr/share/lintian/overrides/firefox-esr			    firefox-esr
 usr/share/lintian/overrides/giblib1			    giblib1
@@ -10954,12 +10992,15 @@ usr/share/locale/ast/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/az/LC_MESSAGES/GConf2.mo		    gconf2-common
 usr/share/locale/az/LC_MESSAGES/gftp.mo			    gftp-common
 usr/share/locale/be/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/be/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/be/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/be/LC_MESSAGES/gftp.mo			    gftp-common
 usr/share/locale/be/LC_MESSAGES/openbox.mo		    openbox
 usr/share/locale/be/LC_MESSAGES/wget.mo			    wget
+usr/share/locale/be@latin/LC_MESSAGES/elogind.mo	    elogind
 usr/share/locale/be@latin/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/bg/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/bg/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/bg/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/bg/LC_MESSAGES/gftp.mo			    gftp-common
 usr/share/locale/bg/LC_MESSAGES/leafpad.mo		    leafpad
@@ -10975,6 +11016,7 @@ usr/share/locale/br/LC_MESSAGES/leafpad.mo		    leafpad
 usr/share/locale/bs/LC_MESSAGES/GConf2.mo		    gconf2-common
 usr/share/locale/bs/LC_MESSAGES/obkey.mo		    obkey
 usr/share/locale/ca/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/ca/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/ca/LC_MESSAGES/epdfview.mo		    epdfview
 usr/share/locale/ca/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/ca/LC_MESSAGES/gftp.mo			    gftp-common
@@ -10984,6 +11026,7 @@ usr/share/locale/ca/LC_MESSAGES/wget.mo			    wget
 usr/share/locale/ca@valencia/LC_MESSAGES/GConf2.mo	    gconf2-common
 usr/share/locale/ca@valencia/LC_MESSAGES/evince.mo	    evince
 usr/share/locale/cs/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/cs/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/cs/LC_MESSAGES/epdfview.mo		    epdfview
 usr/share/locale/cs/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/cs/LC_MESSAGES/gftp.mo			    gftp-common
@@ -10995,6 +11038,7 @@ usr/share/locale/cs/LC_MESSAGES/wget.mo			    wget
 usr/share/locale/cy/LC_MESSAGES/GConf2.mo		    gconf2-common
 usr/share/locale/cy/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/da/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/da/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/da/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/da/LC_MESSAGES/gftp.mo			    gftp-common
 usr/share/locale/da/LC_MESSAGES/leafpad.mo		    leafpad
@@ -11002,6 +11046,7 @@ usr/share/locale/da/LC_MESSAGES/openbox.mo		    openbox
 usr/share/locale/da/LC_MESSAGES/rox.mo			    rox-filer
 usr/share/locale/da/LC_MESSAGES/wget.mo			    wget
 usr/share/locale/de/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/de/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/de/LC_MESSAGES/emelfm2.mo		    emelfm2
 usr/share/locale/de/LC_MESSAGES/epdfview.mo		    epdfview
 usr/share/locale/de/LC_MESSAGES/evince.mo		    evince
@@ -11019,6 +11064,7 @@ usr/share/locale/dz/LC_MESSAGES/GConf2.mo		    gconf2-common
 usr/share/locale/dz/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/dz/LC_MESSAGES/gftp.mo			    gftp-common
 usr/share/locale/el/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/el/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/el/LC_MESSAGES/epdfview.mo		    epdfview
 usr/share/locale/el/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/el/LC_MESSAGES/gftp.mo			    gftp-common
@@ -11044,6 +11090,7 @@ usr/share/locale/eo/LC_MESSAGES/gnutls-deb0-28.mo	    libgnutls-deb0-28
 usr/share/locale/eo/LC_MESSAGES/leafpad.mo		    leafpad
 usr/share/locale/eo/LC_MESSAGES/wget.mo			    wget
 usr/share/locale/es/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/es/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/es/LC_MESSAGES/epdfview.mo		    epdfview
 usr/share/locale/es/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/es/LC_MESSAGES/findnrun.mo		    findnrun-nls
@@ -11056,6 +11103,7 @@ usr/share/locale/es/LC_MESSAGES/roxterm.mo		    roxterm-common
 usr/share/locale/es/LC_MESSAGES/uextract.mo		    uextract
 usr/share/locale/es/LC_MESSAGES/wget.mo			    wget
 usr/share/locale/et/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/et/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/et/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/et/LC_MESSAGES/openbox.mo		    openbox
 usr/share/locale/et/LC_MESSAGES/wget.mo			    wget
@@ -11070,6 +11118,7 @@ usr/share/locale/eu/LC_MESSAGES/wget.mo			    wget
 usr/share/locale/fa/LC_MESSAGES/GConf2.mo		    gconf2-common
 usr/share/locale/fa/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/fi/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/fi/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/fi/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/fi/LC_MESSAGES/gftp.mo			    gftp-common
 usr/share/locale/fi/LC_MESSAGES/gnutls-deb0-28.mo	    libgnutls-deb0-28
@@ -11078,6 +11127,7 @@ usr/share/locale/fi/LC_MESSAGES/openbox.mo		    openbox
 usr/share/locale/fi/LC_MESSAGES/rox.mo			    rox-filer
 usr/share/locale/fi/LC_MESSAGES/wget.mo			    wget
 usr/share/locale/fr/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/fr/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/fr/LC_MESSAGES/emelfm2.mo		    emelfm2
 usr/share/locale/fr/LC_MESSAGES/epdfview.mo		    epdfview
 usr/share/locale/fr/LC_MESSAGES/evince.mo		    evince
@@ -11100,6 +11150,7 @@ usr/share/locale/ga/LC_MESSAGES/gftp.mo			    gftp-common
 usr/share/locale/ga/LC_MESSAGES/leafpad.mo		    leafpad
 usr/share/locale/ga/LC_MESSAGES/wget.mo			    wget
 usr/share/locale/gl/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/gl/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/gl/LC_MESSAGES/epdfview.mo		    epdfview
 usr/share/locale/gl/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/gl/LC_MESSAGES/gftp.mo			    gftp-common
@@ -11120,11 +11171,13 @@ usr/share/locale/he_IL/LC_MESSAGES/epdfview.mo		    epdfview
 usr/share/locale/hi/LC_MESSAGES/GConf2.mo		    gconf2-common
 usr/share/locale/hi/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/hr/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/hr/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/hr/LC_MESSAGES/gftp.mo			    gftp-common
 usr/share/locale/hr/LC_MESSAGES/obkey.mo		    obkey
 usr/share/locale/hr/LC_MESSAGES/openbox.mo		    openbox
 usr/share/locale/hr/LC_MESSAGES/wget.mo			    wget
 usr/share/locale/hu/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/hu/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/hu/LC_MESSAGES/epdfview.mo		    epdfview
 usr/share/locale/hu/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/hu/LC_MESSAGES/gftp.mo			    gftp-common
@@ -11135,11 +11188,13 @@ usr/share/locale/hu/LC_MESSAGES/wget.mo			    wget
 usr/share/locale/hy/LC_MESSAGES/GConf2.mo		    gconf2-common
 usr/share/locale/ia/LC_MESSAGES/openbox.mo		    openbox
 usr/share/locale/id/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/id/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/id/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/id/LC_MESSAGES/leafpad.mo		    leafpad
 usr/share/locale/id/LC_MESSAGES/wget.mo			    wget
 usr/share/locale/is/LC_MESSAGES/GConf2.mo		    gconf2-common
 usr/share/locale/it/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/it/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/it/LC_MESSAGES/epdfview.mo		    epdfview
 usr/share/locale/it/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/it/LC_MESSAGES/findnrun.mo		    findnrun-nls
@@ -11152,6 +11207,7 @@ usr/share/locale/it/LC_MESSAGES/wget.mo			    wget
 usr/share/locale/it/LC_MESSAGES/yad.mo			    yad
 usr/share/locale/it_IT/LC_MESSAGES/madedit.mo		    madedit
 usr/share/locale/ja/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/ja/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/ja/LC_MESSAGES/emelfm2.mo		    emelfm2
 usr/share/locale/ja/LC_MESSAGES/epdfview.mo		    epdfview
 usr/share/locale/ja/LC_MESSAGES/evince.mo		    evince
@@ -11162,12 +11218,15 @@ usr/share/locale/ja/LC_MESSAGES/rox.mo			    rox-filer
 usr/share/locale/ja/LC_MESSAGES/wget.mo			    wget
 usr/share/locale/ja_JP/LC_MESSAGES/madedit.mo		    madedit
 usr/share/locale/ka/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/ka/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/ka/LC_MESSAGES/evince.mo		    evince
+usr/share/locale/kab/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/kk/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/km/LC_MESSAGES/GConf2.mo		    gconf2-common
 usr/share/locale/kn/LC_MESSAGES/GConf2.mo		    gconf2-common
 usr/share/locale/kn/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/ko/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/ko/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/ko/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/ko/LC_MESSAGES/gftp.mo			    gftp-common
 usr/share/locale/ko/LC_MESSAGES/leafpad.mo		    leafpad
@@ -11175,6 +11234,7 @@ usr/share/locale/ks/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/ku/LC_MESSAGES/GConf2.mo		    gconf2-common
 usr/share/locale/ku/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/lt/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/lt/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/lt/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/lt/LC_MESSAGES/gftp.mo			    gftp-common
 usr/share/locale/lt/LC_MESSAGES/leafpad.mo		    leafpad
@@ -11212,6 +11272,7 @@ usr/share/locale/ne/LC_MESSAGES/GConf2.mo		    gconf2-common
 usr/share/locale/ne/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/ne/LC_MESSAGES/gftp.mo			    gftp-common
 usr/share/locale/nl/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/nl/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/nl/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/nl/LC_MESSAGES/gftp.mo			    gftp-common
 usr/share/locale/nl/LC_MESSAGES/gnutls-deb0-28.mo	    libgnutls-deb0-28
@@ -11231,9 +11292,11 @@ usr/share/locale/oc/LC_MESSAGES/gftp.mo			    gftp-common
 usr/share/locale/or/LC_MESSAGES/GConf2.mo		    gconf2-common
 usr/share/locale/or/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/pa/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/pa/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/pa/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/pa/LC_MESSAGES/gftp.mo			    gftp-common
 usr/share/locale/pl/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/pl/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/pl/LC_MESSAGES/emelfm2.mo		    emelfm2
 usr/share/locale/pl/LC_MESSAGES/epdfview.mo		    epdfview
 usr/share/locale/pl/LC_MESSAGES/evince.mo		    evince
@@ -11247,6 +11310,7 @@ usr/share/locale/pl/LC_MESSAGES/uextract.mo		    uextract
 usr/share/locale/pl/LC_MESSAGES/wget.mo			    wget
 usr/share/locale/ps/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/pt/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/pt/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/pt/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/pt/LC_MESSAGES/gftp.mo			    gftp-common
 usr/share/locale/pt/LC_MESSAGES/leafpad.mo		    leafpad
@@ -11254,6 +11318,7 @@ usr/share/locale/pt/LC_MESSAGES/openbox.mo		    openbox
 usr/share/locale/pt/LC_MESSAGES/roxterm.mo		    roxterm-common
 usr/share/locale/pt/LC_MESSAGES/wget.mo			    wget
 usr/share/locale/pt_BR/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/pt_BR/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/pt_BR/LC_MESSAGES/epdfview.mo		    epdfview
 usr/share/locale/pt_BR/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/pt_BR/LC_MESSAGES/gftp.mo		    gftp-common
@@ -11266,12 +11331,14 @@ usr/share/locale/pt_BR/LC_MESSAGES/yad.mo		    yad
 usr/share/locale/pt_PT/LC_MESSAGES/epdfview.mo		    epdfview
 usr/share/locale/pt_PT/LC_MESSAGES/rox.mo		    rox-filer
 usr/share/locale/ro/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/ro/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/ro/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/ro/LC_MESSAGES/gftp.mo			    gftp-common
 usr/share/locale/ro/LC_MESSAGES/openbox.mo		    openbox
 usr/share/locale/ro/LC_MESSAGES/rox.mo			    rox-filer
 usr/share/locale/ro/LC_MESSAGES/wget.mo			    wget
 usr/share/locale/ru/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/ru/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/ru/LC_MESSAGES/emelfm2.mo		    emelfm2
 usr/share/locale/ru/LC_MESSAGES/epdfview.mo		    epdfview
 usr/share/locale/ru/LC_MESSAGES/evince.mo		    evince
@@ -11289,8 +11356,10 @@ usr/share/locale/rw/LC_MESSAGES/GConf2.mo		    gconf2-common
 usr/share/locale/rw/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/rw/LC_MESSAGES/gftp.mo			    gftp-common
 usr/share/locale/si/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/si/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/si/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/sk/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/sk/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/sk/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/sk/LC_MESSAGES/gftp.mo			    gftp-common
 usr/share/locale/sk/LC_MESSAGES/leafpad.mo		    leafpad
@@ -11305,6 +11374,7 @@ usr/share/locale/sq/LC_MESSAGES/GConf2.mo		    gconf2-common
 usr/share/locale/sq/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/sq/LC_MESSAGES/gftp.mo			    gftp-common
 usr/share/locale/sr/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/sr/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/sr/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/sr/LC_MESSAGES/gftp.mo			    gftp-common
 usr/share/locale/sr/LC_MESSAGES/leafpad.mo		    leafpad
@@ -11316,6 +11386,7 @@ usr/share/locale/sr@latin/LC_MESSAGES/GConf2.mo		    gconf2-common
 usr/share/locale/sr@latin/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/sr@latin/LC_MESSAGES/openbox.mo	    openbox
 usr/share/locale/sv/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/sv/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/sv/LC_MESSAGES/epdfview.mo		    epdfview
 usr/share/locale/sv/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/sv/LC_MESSAGES/gftp.mo			    gftp-common
@@ -11334,6 +11405,7 @@ usr/share/locale/th/LC_MESSAGES/GConf2.mo		    gconf2-common
 usr/share/locale/th/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/th/LC_MESSAGES/gftp.mo			    gftp-common
 usr/share/locale/tr/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/tr/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/tr/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/tr/LC_MESSAGES/gftp.mo			    gftp-common
 usr/share/locale/tr/LC_MESSAGES/leafpad.mo		    leafpad
@@ -11341,6 +11413,7 @@ usr/share/locale/tr/LC_MESSAGES/openbox.mo		    openbox
 usr/share/locale/tr/LC_MESSAGES/wget.mo			    wget
 usr/share/locale/ug/LC_MESSAGES/GConf2.mo		    gconf2-common
 usr/share/locale/uk/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/uk/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/uk/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/uk/LC_MESSAGES/gftp.mo			    gftp-common
 usr/share/locale/uk/LC_MESSAGES/gnutls-deb0-28.mo	    libgnutls-deb0-28
@@ -11363,6 +11436,7 @@ usr/share/locale/wa/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/xh/LC_MESSAGES/GConf2.mo		    gconf2-common
 usr/share/locale/yi/LC_MESSAGES/GConf2.mo		    gconf2-common
 usr/share/locale/zh_CN/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/zh_CN/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/zh_CN/LC_MESSAGES/emelfm2.mo		    emelfm2
 usr/share/locale/zh_CN/LC_MESSAGES/epdfview.mo		    epdfview
 usr/share/locale/zh_CN/LC_MESSAGES/evince.mo		    evince
@@ -11380,6 +11454,7 @@ usr/share/locale/zh_HK/LC_MESSAGES/find_n_run_hk.mo	    findnrun-nls
 usr/share/locale/zh_HK/LC_MESSAGES/gftp.mo		    gftp-common
 usr/share/locale/zh_SG/LC_MESSAGES/find_n_run_sg.mo	    findnrun-nls
 usr/share/locale/zh_TW/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/zh_TW/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/zh_TW/LC_MESSAGES/epdfview.mo		    epdfview
 usr/share/locale/zh_TW/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/zh_TW/LC_MESSAGES/find_n_run_tw.mo	    findnrun-nls
@@ -11444,7 +11519,9 @@ usr/share/man/man1/aubusy.1.gz				    aufs-tools
 usr/share/man/man1/auchk.1.gz				    aufs-tools
 usr/share/man/man1/auibusy.1.gz				    aufs-tools
 usr/share/man/man1/bacon.1.gz				    bacon
+usr/share/man/man1/busctl.1.gz				    elogind
 usr/share/man/man1/ceni.1p.gz				    ceni
+usr/share/man/man1/elogind-inhibit.1.gz			    elogind
 usr/share/man/man1/emelfm2.1				    emelfm2
 usr/share/man/man1/empty.1.gz				    empty-expect
 usr/share/man/man1/epdfview.1.gz			    epdfview
@@ -11458,6 +11535,7 @@ usr/share/man/man1/gftp.1.gz				    gftp-common
 usr/share/man/man1/httpfs2.1.gz				    httpfs2
 usr/share/man/man1/iceauth.1.gz				    x11-xserver-utils
 usr/share/man/man1/leafpad.1.gz				    leafpad
+usr/share/man/man1/loginctl.1.gz			    elogind
 usr/share/man/man1/nicinfo.1p.gz			    ceni
 usr/share/man/man1/obxprop.1.gz				    openbox
 usr/share/man/man1/openbox-menu.1.gz			    openbox-menu
@@ -11569,14 +11647,26 @@ usr/share/man/man3/WWW::YoutubeViewer::VideoCategories.3pm  youtube-viewer
 usr/share/man/man3/WWW::YoutubeViewer::Videos.3pm	    youtube-viewer
 usr/share/man/man5/aufs.5.gz				    aufs-tools
 usr/share/man/man5/fstab.5.gz				    mount
+usr/share/man/man5/logind.conf.5.gz			    elogind
+usr/share/man/man5/logind.conf.d.5.gz			    elogind
+usr/share/man/man5/org.freedesktop.login1.5.gz		    elogind
+usr/share/man/man5/sleep.conf.5.gz			    elogind
+usr/share/man/man5/sleep.conf.d.5.gz			    elogind
+usr/share/man/man7/elogind.directives.7.gz		    elogind
+usr/share/man/man7/elogind.index.7.gz			    elogind
+usr/share/man/man7/elogind.journal-fields.7.gz		    elogind
+usr/share/man/man7/elogind.syntax.7.gz			    elogind
+usr/share/man/man7/elogind.time.7.gz			    elogind
 usr/share/man/man8/MAKEDEV.8.gz				    makedev
 usr/share/man/man8/aumvdown.8.gz			    aufs-tools
 usr/share/man/man8/auplink.8.gz				    aufs-tools
+usr/share/man/man8/elogind.8.gz				    elogind
 usr/share/man/man8/findmnt.8.gz				    mount
 usr/share/man/man8/linux-user-chroot.8.gz		    linux-user-chroot
 usr/share/man/man8/losetup.8.gz				    mount
 usr/share/man/man8/mount.8.gz				    mount
 usr/share/man/man8/mount.aufs.8.gz			    aufs-tools
+usr/share/man/man8/pam_elogind.8.gz			    libpam-elogind
 usr/share/man/man8/swapoff.8.gz				    mount
 usr/share/man/man8/swapon.8.gz				    mount
 usr/share/man/man8/umount.8.gz				    mount
@@ -11633,11 +11723,13 @@ usr/share/menu/start-openbox				    jwm-setup
 usr/share/menu/x11-xserver-utils			    x11-xserver-utils
 usr/share/menu/youtube-get				    youtube-get
 usr/share/menu/youtube-get2				    youtube-get2
+usr/share/metainfo/elogind.metainfo.xml			    elogind
 usr/share/metainfo/org.xfce.thunar.appdata.xml		    thunar
 usr/share/mime/packages/notecase.xml			    notecase
 usr/share/mime/packages/rox.xml				    rox-filer
 usr/share/obkey/icons/add_child.png			    obkey
 usr/share/obkey/icons/add_sibling.png			    obkey
+usr/share/pam-configs/elogind				    libpam-elogind
 usr/share/perl5/Ceni/Backend.pm				    ceni
 usr/share/perl5/LWP/UserAgent/Cached.pm			    pipe-viewer,youtube-viewer,straw-viewer
 usr/share/perl5/Mozilla/CA.pm				    straw-viewer
@@ -12087,6 +12179,7 @@ usr/share/pixmaps/yt.png				    youtube-get2,youtube-get3
 usr/share/pixmaps/ytt.png				    youtube-get2,youtube-get,youtube-get3
 usr/share/pixmaps/yyt.png				    youtube-get2,youtube-get3
 usr/share/pkgconfig/adwaita-icon-theme.pc		    adwaita-icon-theme
+usr/share/polkit-1/actions/org.freedesktop.login1.policy    elogind
 usr/share/polkit-1/actions/org.xfce.thunar.policy	    thunar
 usr/share/pyshared/PIL.pth				    img2pdf-old
 usr/share/pyshared/PIL/ArgImagePlugin.py		    img2pdf-old
@@ -13392,6 +13485,8 @@ usr/share/xlunch/icons/restart_32x32.png		    xlunch
 usr/share/xlunch/icons/shutdown_32x32.png		    xlunch
 usr/share/xlunch/icons/vlc_32x32.png			    xlunch
 usr/share/xsessions/openbox.desktop			    openbox
+usr/share/zsh/site-functions/_busctl			    elogind
+usr/share/zsh/site-functions/_loginctl			    elogind
 usr/src/gtk2desklet/compile				    gtkdesklet
 usr/src/gtk2desklet/install				    gtkdesklet
 usr/src/gtk2desklet/libgtk2desklet.c			    gtkdesklet
