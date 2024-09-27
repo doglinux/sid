@@ -200,6 +200,20 @@ SHA256: c7cff061ff83b4ac5bbc62c6dfb0fc6a26b90677e65c51418913095857f79924
 SHA512: c4dea3a99e465a561f6e47daa312afb29fcc5a3b60ae5564a792e61bbc33f496b89098734571ce4452a20e5ddec4ed39060fe03d08f1a9753b2f314c9aaae647
 Description: Pulseaudio emulator using alsa
 
+Package: apulse
+Architecture: amd64
+Version: 20240828
+Priority: extra
+Maintainer: rcrsn51
+Depends: libasound2 (>= 1.0.18), libc6 (>= 2.17), libglib2.0-0 (>= 2.14.0)
+Filename: ./apulse_20240828_amd64.deb
+Size: 32872
+MD5sum: 9bc27ecc88dcc1fc28ab6139d3ae0492
+SHA1: d3a9f9cd08f74acb29e331fc61d84a140d4fd203
+SHA256: 50a19331fccf5d7ce39c26f339ffa822b0e913c8a76d80a6a63daec1af41274b
+SHA512: fc69217dd7179f6c6e512a416d4f6ab7cf15199f7dba0b20ccfc9cef67061fd06826595c65a68d4aa1c3822bbd5f81b7589e9b8f2259a68c4767b6beed310e99
+Description: Pulseaudio emulator using alsa
+
 Package: audio-converter
 Architecture: all
 Version: 1.4-1
@@ -503,6 +517,20 @@ SHA1: 3f2520513152b570878681c4a1545c637e60e2a6
 SHA256: b8770298b9ca0108f9abb937b5499525d6fede80aaf7a686f2bbcbcd34ee0664
 SHA512: 00fad29cfc1e3fe93362ab853a3e22bcd578919d6a6153df612796861b6b8a51bac52c4d12fbc78cc7f112025fac8ae743282ff7818c1e2ca5d7cae98ae8112a
 Description: Edits media files
+
+Package: avsplitter
+Architecture: all
+Version: 1.0.0
+Priority: optional
+Maintainer: fredx181
+Depends: ffmpeg, gtkdialog
+Filename: ./avsplitter_1.0.0_all.deb
+Size: 28220
+MD5sum: 09a81f5654fa03ac4058456dc656a8cf
+SHA1: 37c75a7c3ad17ea2acfab7a060c7e5e97b8bb22e
+SHA256: 61013e61d7e71f4dec2552d084662202ae3f62ef9b22d537f7ff6328ce227986
+SHA512: b90e0038521245af6881c75ac6de6771d0fa2fc182e47c8acd3192f987f4aee54c02bf95ba568d9c1f24c73cc7551d600f941ba119315eb9a3c2a275e0662a0e
+Description: Split Video/Audio into chapters
 
 Package: azpainter
 Architecture: amd64
@@ -1770,6 +1798,23 @@ SHA256: 464139b416a2fda7c5e83e06e1c48c56b347494145683b079f12b9b9eb94d058
 SHA512: 717b6ef2090ddcc68b87eb789edf8f8dcdeeb0718d9b68255f68ac1e9e6381e10909a57eac773f5dd407535b07ccb9f092bf8ce94355819f83e54374c0e64cb6
 Description: DropboxGUI, by mikeb
 
+Package: edit-sfs-pcmanfm-qt
+Architecture: all
+Version: 2.5
+Priority: extra
+Section: x11
+Maintainer: root
+Installed-Size: 134
+Depends: libc6 (>= 2.7-1), squashfs-tools (>= 4.2-1), bash, x11-utils, pcmanfm-qt, disktype, coreutils, xterm
+Replaces: edit-sfs-rox, edit-sfs-thunar, edit-sfs-pcmanfm
+Filename: ./edit-sfs-pcmanfm-qt_2.5_all.deb
+Size: 6608
+MD5sum: a72d58457c2524205c2413e2b8ec6e41
+SHA1: aafe8f4773629615d83f0f3c5a994438fa76650c
+SHA256: e20cb5c20561d3750b7b674d107358c8a0d501d5f227c93e3138407a0c0cd4b9
+SHA512: 368198ce7ee65a4aaa835474e02735415bcb33ab054a6aab42f425e11a73256ec82f6882197723619311568b44ae81cca3a0197e130aafaf11029aa6050d8604
+Description: squashfs editor, converter
+
 Package: edit-sfs-pcmanfm
 Architecture: all
 Version: 2.5
@@ -2019,6 +2064,21 @@ MD5sum: e6ec4fe967bb9fc2a04c441f02ecd2a7
 SHA1: 2e2c11c4705410f0583a7635af857ee7e6fc9fde
 SHA256: 8bdfee44956c703fdb027f2f9aa895a46fcb0605d91dfb8b9f7ba00b603124b7
 SHA512: da2cd2228f3f40a348ad406b7155360dc3df388e8d62842e45c4a62c3fba28defa8e33f14b7648a302126bc0f4f98883d327dc69182b5bc428302ba0acd14656
+Description: Mount images, savefile, modules
+
+Package: filemnt-pcmanfm-qt
+Architecture: amd64
+Version: 1.0.2
+Maintainer: fredx181 root@dog
+Installed-Size: 39
+Depends: libc6, disktype, menu, pcmanfm-qt
+Replaces: filemnt-rox, filemnt-xfe, filemnt-thunar, filemnt-pcmanfm
+Filename: ./filemnt-pcmanfm-qt_1.0.2_amd64.deb
+Size: 42640
+MD5sum: 07fd706b986bdb15aa26682daa61c190
+SHA1: c62736c0dfae5a1813e64c941bfc4884c79ea557
+SHA256: 95a35d70dc23df51fc1f8614f8c3cc5f3b0128a9040469a5dc4f64cb53a4800f
+SHA512: 90809c4c0be3ad86a44f85770a2320b94540215e7c816926e58a68e84fe0f6cce1827318fac118b58548d4c1aefbcca5d7581b5dfdc2f431eda12c62e9ea2af6
 Description: Mount images, savefile, modules
 
 Package: filemnt-pcmanfm
@@ -2870,6 +2930,36 @@ MD5sum: b5803dcdf033ed74dd16eb2667ba2b53
 SHA1: db8d3d27d770201dbfbb1d325f1b48b4dda3019c
 SHA256: b5d291b31f5a895c89d40d3afcdacc371507e07bbb7f2f0130f60c447a0ce037
 SHA512: e2f5a42b1af3064c4175c19d06839869a2c93bce7745622a4f8d9f5ac6af438a560244c3a0594baeff49d8731b45aa36088fc8ffc5895fa56db5c557df01d766
+Homepage: http://code.google.com/p/gnome-mplayer
+Description: GTK+ interface for MPlayer
+ The power of MPlayer combined with a friendly interface for your desktop.
+ You can play all your multimedia (audio, video, CD, DVDs, and VCDs, streams
+ etc. with full DVD and MKV chapter support), organize, sort and create
+ playlists, take screenshots while playing videos, be notified about media
+ changes, retrieve cover art and more.
+ Gnome-MPlayer fully supports subtitles giving the ability to specify
+ preferred audio and subtitle languages.
+ .
+ The player can be used to play media on websites from your browser when
+ used with Gecko Mediaplayer and is the modern replacement for
+ mplayerplug-in (from the same author).
+
+Package: gnome-mplayer-1.0.6
+Architecture: amd64
+Version: 1.0.9-4
+Priority: optional
+Section: video
+Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Installed-Size: 1275
+Depends: mplayer, libasound2, libatk1.0-0, libc6, libcairo2, libdbus-1-3, libdbus-glib-1-2, libfontconfig1, libfreetype6, libgdk-pixbuf2.0-0, libglib2.0-0, libgpod4, libgtk2.0-0, libpango-1.0-0, libpangocairo-1.0-0, libpangoft2-1.0-0, libx11-6, libxss1, libnotify4, libpulse-mainloop-glib0
+Suggests: gecko-mediaplayer
+Replaces: peasymp3
+Filename: ./gnome-mplayer-1.0.6_1.0.9-4_amd64.deb
+Size: 177008
+MD5sum: 21f60a45b48b7d550409d7ab2b90c725
+SHA1: 6a688821d1f2216ebed4e3eeb1eb195dbb293fb3
+SHA256: 0b4d9a844968b1aa7d8c2bd6176970b3b7114313dde98e6d42b513f386142294
+SHA512: 05c03fde79bb1cb8d5cfc4ba0aa1f770b875ba5116d44ad7928248f92ec6e51692b6bc280707b6420d7c5934112f24f8910b26dcca0ae7d29dd20d412f613809
 Homepage: http://code.google.com/p/gnome-mplayer
 Description: GTK+ interface for MPlayer
  The power of MPlayer combined with a friendly interface for your desktop.
@@ -7564,6 +7654,22 @@ SHA256: 66b30d51a0bc16f313627ba429c7cff0c660ae07680dc87d62e933dd698a3997
 SHA512: bbbe85638b426e4d4167b46c935fb0dc8e1770eb7effef5b34ee66c90139d231f5bcfd86fa60883457fed7a87f7df0aaa69fa9dd3eb19b9a25a1211b0810304a
 Description: partition information utilities probedisk and probepart
 
+Package: pulsecapgui
+Architecture: all
+Version: 1.0.0
+Priority: optional
+Section: utilities
+Maintainer: fredx181
+Installed-Size: 962
+Depends: pulseaudio-utils, vorbis-tools, lame
+Filename: ./pulsecapgui_1.0.0_all.deb
+Size: 5572
+MD5sum: 50bc7e5803f3bb21d4b0eacb27558f4e
+SHA1: f832ad64f98057e444fcac1527a1084678ae0986
+SHA256: 64adf97aa9c3c1961f3ab57b6133a1c959f9f6732c485ab6464c897c49676fd2
+SHA512: 7c45567c0d6fca9f0ce478ade1953ec660a439431b89ef5c020883b6228f0c7d851f57dce1e70c5958160d906d74fdc2c079e1bb00018ef19d472982ff43752a
+Description: Record what you hear (for pulse or pipewire)
+
 Package: pup-volume-monitor
 Architecture: amd64
 Version: 0.1.15-2
@@ -8677,6 +8783,22 @@ Description: Load a *.squashfs or *.sfs module.
  v1.0.9 added service to unload sfs module at shutdown
  v2.0.0 now mount module READ-WRITE, so  it's possible that files included can be modified or replaced.
 
+Package: simple-http-filemanager
+Architecture: all
+Version: 1.0.0
+Priority: optional
+Section: utilities
+Maintainer: fredx181
+Installed-Size: 50
+Depends: gtkdialog, curl
+Filename: ./simple-http-filemanager_1.0.0_all.deb
+Size: 9084
+MD5sum: cafe29bc30561734bd41b9a988c00111
+SHA1: cf834d93eee67301f95efd5a838b03ad61223786
+SHA256: c429561c5c6c3fc2d0d36ae95c7cfbdffe38aac6344eb024070a8034084b4c3e
+SHA512: b0095cf2724508415d91ba5ecf3b6aabbace73c2777836d180ba8fe4428ceef9370a282dab214b71e02a5629121bcc27224742b4cba02b83242926b2a5fc8c6a
+Description: two pane http filemanager
+
 Package: simple-python-http-server
 Architecture: all
 Version: 1.2
@@ -8707,6 +8829,24 @@ SHA256: 42008bd0a0bd519b5009608fb60b65158de52194e0d8228f8f293b6987c26f21
 SHA512: 516a4fb0f9294d079e202791e49f6ce20000819e73ed0f28d670d1b9e5c08167dcbf2e55a64328b969105f8b1fe2a6998f313737ec6859d091fd1cb1324ca8f9
 Description: Makes a basic LAN web server
 
+Package: simple-python3-http-server
+Architecture: all
+Version: 1.0.0
+Priority: optional
+Section: utilities
+Maintainer: fredx181
+Installed-Size: 50
+Depends: python3, gtkdialog, curl
+Conflicts: simple-python-http-server
+Replaces: simple-python-http-server
+Filename: ./simple-python3-http-server_1.0.0_all.deb
+Size: 10684
+MD5sum: 4139c52749c92b6c07b0770e60d8a684
+SHA1: 1e8706893ecdc5fcc09c8a5d89c01a8c9a6a4c64
+SHA256: e49998305af470e26bd896cdf718cbc37248f50d74422b097cffefac1d5643c0
+SHA512: 0c4ea400225fd59c91207f4b44694e54b0dc9129cc96ce37afe40a6a96a09f98d36cb4c527e1f9f0eae11eabf64e721c445bcbefd9ba111a26abe73c7c8ef6e9
+Description: simple-python3-http-server alternative version, supports multiple file upload
+
 Package: simple-python-http-server
 Architecture: all
 Version: 1.5
@@ -8721,6 +8861,22 @@ SHA1: 13da7125aadde3ac8a6d8a70883413980cb0b359
 SHA256: 117682a373ee663ddc2861546b40672290612ee901502040fa9be88b9b8d5868
 SHA512: 6d725c540ef844d65d0a1b30fc27fd6923406764b9c879d310f78ec14117075ed28a6dfde8b269c7ebd485c924012513589590260b58d899acc1ae0ea455d0dc
 Description: Makes a basic LAN web server
+
+Package: simplecdripper
+Architecture: amd64
+Version: 1.0.0
+Priority: optional
+Section: utilities
+Maintainer: fredx181
+Installed-Size: 962
+Depends: cdparanoia, cd-discid, flac, vorbis-tools, lame, cuetools, shntool, fdkaac, monkeys-audio, atomicparsley, id3v2
+Filename: ./simplecdripper_1.0.0_amd64.deb
+Size: 630816
+MD5sum: 5ed96d3b20ad323845cf21013e5ee264
+SHA1: bbaf92b56baff1e5dca027a0d2cd7d154bafab0f
+SHA256: bb96449787b78368e02f2a5f00712fd6072f3374361debafe4751809e4eb0567
+SHA512: 1888ce926dd15593d5ef29803d96ccf81b5a408786ff0872ff8d1b6787ffe7be5d45054e8fb04f0cbbcc7758e7fd3106e5dcf08af080e5eb2717a7aa574131b9
+Description: Simple Audio CD ripper
 
 Package: snappie
 Architecture: amd64

@@ -97,12 +97,12 @@ etc/skel/.config/rox.sourceforge.net/MIME-types/application jwm-setup,jwmconf
 etc/skel/.config/rox.sourceforge.net/MIME-types/image_png   jwm-setup,jwmconf
 etc/skel/.config/rox.sourceforge.net/MIME-types/image_x-xpixmap jwm-setup,jwmconf
 etc/skel/.config/rox.sourceforge.net/MIME-types/text_plain  jwm-setup,jwmconf
-etc/skel/.config/rox.sourceforge.net/OpenWith/.application_octet-stream/convert-sfs edit-sfs-pcmanfm,edit-sfs-thunar
-etc/skel/.config/rox.sourceforge.net/OpenWith/.application_octet-stream/edit-sfs edit-sfs-pcmanfm,edit-sfs-thunar
+etc/skel/.config/rox.sourceforge.net/OpenWith/.application_octet-stream/convert-sfs edit-sfs-pcmanfm-qt,edit-sfs-thunar,edit-sfs-pcmanfm
+etc/skel/.config/rox.sourceforge.net/OpenWith/.application_octet-stream/edit-sfs edit-sfs-pcmanfm-qt,edit-sfs-thunar,edit-sfs-pcmanfm
 etc/skel/.config/rox.sourceforge.net/OpenWith/.application_x-deb/install-deb-and-dependencies fixdepinstall
 etc/skel/.config/rox.sourceforge.net/OpenWith/.inode_directory/install-dir-debs-and-dependencies fixdepinstall
-etc/skel/.config/rox.sourceforge.net/OpenWith/convert-sfs   edit-sfs-pcmanfm,edit-sfs-thunar
-etc/skel/.config/rox.sourceforge.net/OpenWith/edit-sfs	    edit-sfs-pcmanfm,edit-sfs-thunar
+etc/skel/.config/rox.sourceforge.net/OpenWith/convert-sfs   edit-sfs-pcmanfm-qt,edit-sfs-thunar,edit-sfs-pcmanfm
+etc/skel/.config/rox.sourceforge.net/OpenWith/edit-sfs	    edit-sfs-pcmanfm-qt,edit-sfs-thunar,edit-sfs-pcmanfm
 etc/skel/.config/rox.sourceforge.net/ROX-Filer/Options	    jwm-setup,jwmconf
 etc/skel/.config/rox.sourceforge.net/ROX-Filer/globicons    jwm-setup,jwmconf
 etc/skel/.config/rox.sourceforge.net/ROX-Filer/menus2	    jwm-setup,jwmconf
@@ -172,12 +172,12 @@ home/puppy/.config/rox.sourceforge.net/MIME-types/application jwm-setup,jwmconf
 home/puppy/.config/rox.sourceforge.net/MIME-types/image_png jwm-setup,jwmconf
 home/puppy/.config/rox.sourceforge.net/MIME-types/image_x-xpixmap jwm-setup,jwmconf
 home/puppy/.config/rox.sourceforge.net/MIME-types/text_plain jwm-setup,jwmconf
-home/puppy/.config/rox.sourceforge.net/OpenWith/.application_octet-stream/convert-sfs edit-sfs-pcmanfm,edit-sfs-thunar
-home/puppy/.config/rox.sourceforge.net/OpenWith/.application_octet-stream/edit-sfs edit-sfs-pcmanfm,edit-sfs-thunar
+home/puppy/.config/rox.sourceforge.net/OpenWith/.application_octet-stream/convert-sfs edit-sfs-pcmanfm-qt,edit-sfs-thunar,edit-sfs-pcmanfm
+home/puppy/.config/rox.sourceforge.net/OpenWith/.application_octet-stream/edit-sfs edit-sfs-pcmanfm-qt,edit-sfs-thunar,edit-sfs-pcmanfm
 home/puppy/.config/rox.sourceforge.net/OpenWith/.application_x-deb/install-deb-and-dependencies fixdepinstall
 home/puppy/.config/rox.sourceforge.net/OpenWith/.inode_directory/install-dir-debs-and-dependencies fixdepinstall
-home/puppy/.config/rox.sourceforge.net/OpenWith/convert-sfs edit-sfs-pcmanfm,edit-sfs-thunar
-home/puppy/.config/rox.sourceforge.net/OpenWith/edit-sfs    edit-sfs-pcmanfm,edit-sfs-thunar
+home/puppy/.config/rox.sourceforge.net/OpenWith/convert-sfs edit-sfs-pcmanfm-qt,edit-sfs-thunar,edit-sfs-pcmanfm
+home/puppy/.config/rox.sourceforge.net/OpenWith/edit-sfs    edit-sfs-pcmanfm-qt,edit-sfs-thunar,edit-sfs-pcmanfm
 home/puppy/.config/rox.sourceforge.net/ROX-Filer/Options    jwm-setup,jwmconf
 home/puppy/.config/rox.sourceforge.net/ROX-Filer/globicons  jwm-setup,jwmconf
 home/puppy/.config/rox.sourceforge.net/ROX-Filer/menus2	    jwm-setup,jwmconf
@@ -187,7 +187,7 @@ home/puppy/.config/rox.sourceforge.net/ROX-Filer/pinbd-OB   jwm-setup,jwmconf
 home/puppy/.config/rox.sourceforge.net/SendTo/Multi-Copy    jwm-setup,jwmconf
 home/puppy/.config/rox.sourceforge.net/SendTo/Multi-Cut	    jwm-setup,jwmconf
 home/puppy/.config/rox.sourceforge.net/SendTo/Multi-Paste   jwm-setup,jwmconf
-home/puppy/.config/xfe/scripts/edit-sfs			    edit-sfs-pcmanfm,edit-sfs-thunar
+home/puppy/.config/xfe/scripts/edit-sfs			    edit-sfs-pcmanfm-qt,edit-sfs-thunar,edit-sfs-pcmanfm
 home/puppy/.config/xfe/scripts/install-deb-and-dependencies fixdepinstall
 home/puppy/.config/xfe/scripts/install-dir-debs-and-dependencies fixdepinstall
 home/puppy/.face					    xfce4-whiskermenu-plugin-mod
@@ -610,8 +610,8 @@ root/.config/rox.sourceforge.net/MIME-types/application	    jwm-setup,jwmconf
 root/.config/rox.sourceforge.net/MIME-types/image_png	    jwm-setup,jwmconf
 root/.config/rox.sourceforge.net/MIME-types/image_x-xpixmap jwm-setup,jwmconf
 root/.config/rox.sourceforge.net/MIME-types/text_plain	    jwm-setup,jwmconf
-root/.config/rox.sourceforge.net/OpenWith/.application_octet-stream/convert-sfs edit-sfs-pcmanfm,edit-sfs-thunar
-root/.config/rox.sourceforge.net/OpenWith/.application_octet-stream/edit-sfs edit-sfs-pcmanfm,edit-sfs-thunar
+root/.config/rox.sourceforge.net/OpenWith/.application_octet-stream/convert-sfs edit-sfs-pcmanfm-qt,edit-sfs-thunar,edit-sfs-pcmanfm
+root/.config/rox.sourceforge.net/OpenWith/.application_octet-stream/edit-sfs edit-sfs-pcmanfm-qt,edit-sfs-thunar,edit-sfs-pcmanfm
 root/.config/rox.sourceforge.net/OpenWith/.application_ogg/Play in xhippo xhippo
 root/.config/rox.sourceforge.net/OpenWith/.application_ogg/ffconvert ffconvert
 root/.config/rox.sourceforge.net/OpenWith/.application_ogg/ffinfo ffconvert
@@ -704,8 +704,8 @@ root/.config/rox.sourceforge.net/OpenWith/.video_x-theora+ogg/Play in xhippo xhi
 root/.config/rox.sourceforge.net/OpenWith/.video_x-theora+ogg/ffconvert ffconvert
 root/.config/rox.sourceforge.net/OpenWith/.video_x-theora+ogg/ffinfo ffconvert
 root/.config/rox.sourceforge.net/OpenWith/Play in xhippo    xhippo
-root/.config/rox.sourceforge.net/OpenWith/convert-sfs	    edit-sfs-pcmanfm,edit-sfs-thunar
-root/.config/rox.sourceforge.net/OpenWith/edit-sfs	    edit-sfs-pcmanfm,edit-sfs-thunar
+root/.config/rox.sourceforge.net/OpenWith/convert-sfs	    edit-sfs-pcmanfm-qt,edit-sfs-thunar,edit-sfs-pcmanfm
+root/.config/rox.sourceforge.net/OpenWith/edit-sfs	    edit-sfs-pcmanfm-qt,edit-sfs-thunar,edit-sfs-pcmanfm
 root/.config/rox.sourceforge.net/OpenWith/ffconvert	    ffconvert
 root/.config/rox.sourceforge.net/OpenWith/ffinfo	    ffconvert
 root/.config/rox.sourceforge.net/OpenWith/mkplaylist	    ffconvert
@@ -723,7 +723,7 @@ root/.config/rox.sourceforge.net/SendTo/Multi-Copy	    jwm-setup,jwmconf
 root/.config/rox.sourceforge.net/SendTo/Multi-Cut	    jwm-setup,jwmconf
 root/.config/rox.sourceforge.net/SendTo/Multi-Paste	    jwm-setup,jwmconf
 root/.config/screener.conf				    screener
-root/.config/xfe/scripts/edit-sfs			    edit-sfs-pcmanfm,edit-sfs-thunar
+root/.config/xfe/scripts/edit-sfs			    edit-sfs-pcmanfm-qt,edit-sfs-thunar,edit-sfs-pcmanfm
 root/.config/xfe/scripts/install-deb-and-dependencies	    fixdepinstall
 root/.config/xfe/scripts/install-dir-debs-and-dependencies  fixdepinstall
 root/.config/youtube-viewer/api.json			    youtube-viewer
@@ -832,7 +832,7 @@ usr/bin/domycommand					    domycommand
 usr/bin/domyfile					    domyfile
 usr/bin/dpid						    dillo
 usr/bin/dpidc						    dillo
-usr/bin/edit-sfs					    edit-sfs-pcmanfm,edit-sfs-thunar
+usr/bin/edit-sfs					    edit-sfs-pcmanfm-qt,edit-sfs-thunar,edit-sfs-pcmanfm
 usr/bin/emelfm2						    emelfm2
 usr/bin/empty						    empty-expect
 usr/bin/epdfview					    epdfview
@@ -875,7 +875,7 @@ usr/bin/jp2.py						    img2pdf-old
 usr/bin/jwm						    jwm
 usr/bin/leafpad						    leafpad
 usr/bin/linux-user-chroot				    linux-user-chroot
-usr/bin/losetup-FULL					    filemnt-caja,filemnt-thunar,filemnt-rox,filemnt-pcmanfm
+usr/bin/losetup-FULL					    filemnt-caja,filemnt-thunar,filemnt-rox,filemnt-pcmanfm,filemnt-pcmanfm-qt
 usr/bin/lumina-config					    lumina-desktop-debdog
 usr/bin/lumina-fileinfo					    lumina-desktop-debdog
 usr/bin/lumina-fm					    lumina-desktop-debdog
@@ -921,8 +921,8 @@ usr/bin/probedisk					    probepart
 usr/bin/probepart					    probepart
 usr/bin/pup-volume-monitor				    pup-volume-monitor
 usr/bin/pup-volume-monitor-admin			    pup-volume-monitor
-usr/bin/pupdialog					    filemnt-caja,filemnt-thunar,filemnt-rox,filemnt-pcmanfm
-usr/bin/pupmessage					    filemnt-caja,filemnt-thunar,filemnt-rox,filemnt-pcmanfm
+usr/bin/pupdialog					    filemnt-caja,filemnt-thunar,filemnt-rox,filemnt-pcmanfm,filemnt-pcmanfm-qt
+usr/bin/pupmessage					    filemnt-caja,filemnt-thunar,filemnt-rox,filemnt-pcmanfm,filemnt-pcmanfm-qt
 usr/bin/pyclean						    python2-minimal
 usr/bin/pycompile					    python2-minimal
 usr/bin/pydoc2						    python2
@@ -951,7 +951,7 @@ usr/bin/thunar						    thunar
 usr/bin/thunar-settings					    thunar
 usr/bin/unsquashfs					    squashfs-tools
 usr/bin/usleep						    pburn
-usr/bin/vercmp						    filemnt-caja,filemnt-thunar,filemnt-rox,filemnt-pcmanfm
+usr/bin/vercmp						    filemnt-caja,filemnt-thunar,filemnt-rox,filemnt-pcmanfm,filemnt-pcmanfm-qt
 usr/bin/wifi-box					    wifibox-dhcpcd,wifibox
 usr/bin/xcmsdb						    x11-xserver-utils
 usr/bin/xdg-desktop-icon				    xdg-utils
@@ -2738,6 +2738,7 @@ usr/local/bin/av-conv					    ffmpeg
 usr/local/bin/av-converter				    av-converter
 usr/local/bin/av-editor					    av-editor
 usr/local/bin/avconv					    ffmpeg
+usr/local/bin/avsplitter				    avsplitter
 usr/local/bin/batterup					    batterup
 usr/local/bin/batterup_restart				    batterup
 usr/local/bin/batterup_tray				    batterup
@@ -2753,7 +2754,7 @@ usr/local/bin/clear-changes				    quick-remaster
 usr/local/bin/clear-changes-start			    quick-remaster
 usr/local/bin/conkyclock				    conkyclock
 usr/local/bin/conkyclock-2				    conkyclock2
-usr/local/bin/conv-sfs					    edit-sfs-pcmanfm,edit-sfs-thunar
+usr/local/bin/conv-sfs					    edit-sfs-pcmanfm-qt,edit-sfs-thunar,edit-sfs-pcmanfm
 usr/local/bin/create-portable				    create-portable
 usr/local/bin/dancingletters-forum			    dancing-letters
 usr/local/bin/dancingletters-html			    dancing-letters
@@ -2781,7 +2782,7 @@ usr/local/bin/evince					    evince
 usr/local/bin/exec_desktopfile.awk			    lxrandr-save-fix
 usr/local/bin/f3_flash_check				    f3-flash-check
 usr/local/bin/filefinder				    filefinder
-usr/local/bin/filemnt					    filemnt-caja,filemnt-pcmanfm
+usr/local/bin/filemnt					    filemnt-caja,filemnt-pcmanfm,filemnt-pcmanfm-qt
 usr/local/bin/firewall_install				    Firewall-Puppy
 usr/local/bin/firewall_install.sh			    Firewall-Puppy
 usr/local/bin/firewall_ng				    firewall-ng
@@ -2822,6 +2823,7 @@ usr/local/bin/gsu-timeout				    gsu
 usr/local/bin/gsu-xterm					    gsu
 usr/local/bin/gtkdialog-desklet				    gtkdesklet
 usr/local/bin/guess_fstype				    guessfstype
+usr/local/bin/http-fman					    simple-http-filemanager
 usr/local/bin/image-changer				    peasyscale
 usr/local/bin/inkgui					    inkgui
 usr/local/bin/install-deb-and-dependencies		    fixdepinstall
@@ -2915,6 +2917,7 @@ usr/local/bin/popup-image				    popup-image
 usr/local/bin/portablesfs				    portablesfs-loadsfs-fuse
 usr/local/bin/postergo					    gopoststuff
 usr/local/bin/postergo-sel				    gopoststuff
+usr/local/bin/pulsecapgui				    pulsecapgui
 usr/local/bin/qiv-gui-info.sh				    qiv-slideshow
 usr/local/bin/qiv-gui.sh				    qiv-slideshow
 usr/local/bin/quick-remastergui				    quick-remaster
@@ -2929,10 +2932,12 @@ usr/local/bin/rshift-gui-lite				    redshift-gui-lite
 usr/local/bin/run-as-spot				    run-as-user
 usr/local/bin/run-as-user				    run-as-user
 usr/local/bin/samba-server-control			    samba-server-control
+usr/local/bin/scdripper					    simplecdripper
 usr/local/bin/scrox					    scrox
 usr/local/bin/setbackdrop				    jwm-setup,jwmconf
 usr/local/bin/sfs-get					    sfs-get-smokey-get
 usr/local/bin/simpleHTTPserver				    simple-python-http-server
+usr/local/bin/simpleHTTPserver-python3			    simple-python3-http-server
 usr/local/bin/smokey-get				    sfs-get-smokey-get
 usr/local/bin/snappie					    snappie
 usr/local/bin/sound-card-selector			    sound-card-selector
@@ -2955,6 +2960,8 @@ usr/local/bin/uextract					    uextract
 usr/local/bin/umounting					    diff-sync-umount
 usr/local/bin/unzipper					    unzipper
 usr/local/bin/upgrade-kernel				    upgrade-kernel
+usr/local/bin/uploadserver				    simple-python3-http-server
+usr/local/bin/uploadserver.py				    simple-python3-http-server
 usr/local/bin/vnstat-tray				    vnstat-tray
 usr/local/bin/weav					    weav
 usr/local/bin/websearch					    websearch
@@ -5405,6 +5412,15 @@ usr/local/r-shift/usr/lib/libxcb-randr.so.0		    redshift-gui-lite
 usr/local/r-shift/usr/lib/libxcb-randr.so.0.1.0		    redshift-gui-lite
 usr/local/r-shift/usr/share/pixmaps/rshift.png		    redshift-gui-lite
 usr/local/rau/vlc.desktop				    run-as-user
+usr/local/scdrip/bin/apetag				    simplecdripper
+usr/local/scdrip/bin/cdda2wav				    simplecdripper
+usr/local/scdrip/lib/libfdk-aac.so.2			    simplecdripper
+usr/local/scdrip/lib/libfdk-aac.so.2.0.1		    simplecdripper
+usr/local/scdrip/lib/libid3-3.8.so.3			    simplecdripper
+usr/local/scdrip/lib/libid3-3.8.so.3.0.0		    simplecdripper
+usr/local/scdrip/lib/libmac.so.2			    simplecdripper
+usr/local/scdrip/lib/libmac.so.2.0.0			    simplecdripper
+usr/local/scdrip/scdrip					    simplecdripper
 usr/local/share/btop/README.md				    btop
 usr/local/share/btop/themes/adapta.theme		    btop
 usr/local/share/btop/themes/dracula.theme		    btop
@@ -6373,6 +6389,7 @@ usr/share/applications/audio-converter.desktop		    audio-converter
 usr/share/applications/av-clipper-joiner.desktop	    av-clipper-joiner
 usr/share/applications/av-converter.desktop		    av-converter
 usr/share/applications/av-editor.desktop		    av-editor
+usr/share/applications/avsplitter.desktop		    avsplitter
 usr/share/applications/azpainter.desktop		    azpainter
 usr/share/applications/bacongui.desktop			    bacon
 usr/share/applications/batterup_restart.desktop		    batterup
@@ -6381,7 +6398,7 @@ usr/share/applications/camphonetab.desktop		    camphonetab
 usr/share/applications/cast2chrome.desktop		    cast2chrome
 usr/share/applications/ceni.desktop			    ceni
 usr/share/applications/clear-changes.desktop		    quick-remaster
-usr/share/applications/conv-sfs.desktop			    edit-sfs-pcmanfm,edit-sfs-thunar
+usr/share/applications/conv-sfs.desktop			    edit-sfs-pcmanfm-qt,edit-sfs-thunar,edit-sfs-pcmanfm
 usr/share/applications/deadbeef.desktop			    deadbeef-static
 usr/share/applications/debdog-advert-blocker.desktop	    debdog-advert-blocker
 usr/share/applications/desktop_view_edit.desktop	    desktop-editor
@@ -6393,7 +6410,7 @@ usr/share/applications/domyfile.desktop			    domyfile
 usr/share/applications/drivespeed.desktop		    drivespeed
 usr/share/applications/dropbox.desktop			    dropboxgui
 usr/share/applications/dropboxGUI.desktop		    dropboxgui
-usr/share/applications/edit-sfs.desktop			    edit-sfs-pcmanfm,edit-sfs-thunar
+usr/share/applications/edit-sfs.desktop			    edit-sfs-pcmanfm-qt,edit-sfs-thunar,edit-sfs-pcmanfm
 usr/share/applications/emelfm2.desktop			    emelfm2
 usr/share/applications/epdfview.desktop			    epdfview
 usr/share/applications/evince.desktop			    evince
@@ -6479,6 +6496,7 @@ usr/share/applications/pmusic.desktop			    pmusic
 usr/share/applications/pmwget.desktop			    pmirrorget
 usr/share/applications/poster-sel.desktop		    gopoststuff
 usr/share/applications/poster.desktop			    gopoststuff
+usr/share/applications/pulsecap2.desktop		    pulsecapgui
 usr/share/applications/python2.7.desktop		    python2.7
 usr/share/applications/qiv-slideshow.desktop		    qiv-slideshow
 usr/share/applications/qtweb.desktop			    qtweb
@@ -6493,9 +6511,12 @@ usr/share/applications/samba-login.desktop		    yassm-smbclient-mpscan
 usr/share/applications/samba-search.desktop		    yassm-smbclient-mpscan
 usr/share/applications/samba-select.desktop		    yassm-smbclient-mpscan
 usr/share/applications/samba-server-control.desktop	    samba-server-control
+usr/share/applications/scdripper.desktop		    simplecdripper
 usr/share/applications/screener.desktop			    screener
 usr/share/applications/sfs-get.desktop			    sfs-get-smokey-get
 usr/share/applications/sfsportable.desktop		    portablesfs-loadsfs-fuse
+usr/share/applications/simpleHTTPfilemanager.desktop	    simple-http-filemanager
+usr/share/applications/simpleHTTPserver-python3.desktop	    simple-python3-http-server
 usr/share/applications/simpleHTTPserver.desktop		    simple-python-http-server
 usr/share/applications/smokey-get.desktop		    sfs-get-smokey-get
 usr/share/applications/snappie.desktop			    snappie
@@ -10611,7 +10632,7 @@ usr/share/menu/conky-all				    conky-all
 usr/share/menu/conky-std				    conky-std
 usr/share/menu/conkyclock				    conkyclock
 usr/share/menu/conkyclock2				    conkyclock2
-usr/share/menu/conv-sfs					    edit-sfs-pcmanfm,edit-sfs-thunar
+usr/share/menu/conv-sfs					    edit-sfs-pcmanfm-qt,edit-sfs-thunar,edit-sfs-pcmanfm
 usr/share/menu/debdog-advert-blocker			    debdog-advert-blocker
 usr/share/menu/debdog-full-install			    debdoginstallscripts
 usr/share/menu/debdog-install				    debdoginstallscripts
@@ -10620,7 +10641,7 @@ usr/share/menu/dillo					    dillo
 usr/share/menu/dogradio					    dogradio
 usr/share/menu/domycommand				    domycommand
 usr/share/menu/domyfile					    domyfile
-usr/share/menu/edit-sfs					    edit-sfs-pcmanfm,edit-sfs-thunar
+usr/share/menu/edit-sfs					    edit-sfs-pcmanfm-qt,edit-sfs-thunar,edit-sfs-pcmanfm
 usr/share/menu/emelfm2					    emelfm2
 usr/share/menu/epdfview					    epdfview
 usr/share/menu/ffconvert				    ffconvert
@@ -10829,6 +10850,7 @@ usr/share/pixmaps/audio-converter.png			    audio-converter
 usr/share/pixmaps/av-clipper-joiner.png			    av-clipper-joiner
 usr/share/pixmaps/av-converter.png			    av-converter
 usr/share/pixmaps/av-editor.png				    av-editor
+usr/share/pixmaps/avsplitter.png			    avsplitter
 usr/share/pixmaps/azpainter.png				    azpainter
 usr/share/pixmaps/backup-restore.png			    SaveFolderBackup
 usr/share/pixmaps/batterup.png				    batterup
@@ -11090,6 +11112,7 @@ usr/share/pixmaps/palemoon.png				    palemoon
 usr/share/pixmaps/palemoon.xpm				    palemoon
 usr/share/pixmaps/partview-24.png			    peasypartview
 usr/share/pixmaps/partview-48.png			    peasypartview
+usr/share/pixmaps/pcap2.png				    pulsecapgui
 usr/share/pixmaps/peasy-ytdl.png			    peasy-ytdl
 usr/share/pixmaps/peasyclock.png			    peasyclock
 usr/share/pixmaps/peasydial.png				    peasydial
@@ -11166,13 +11189,15 @@ usr/share/pixmaps/rox.png				    jwmconf
 usr/share/pixmaps/roxterm.xpm				    roxterm-common
 usr/share/pixmaps/rshift.png				    redshift-gui-lite
 usr/share/pixmaps/samba-server-control.png		    samba-server-control
+usr/share/pixmaps/scdrip.png				    simplecdripper
 usr/share/pixmaps/sd.png				    mount-wizard
 usr/share/pixmaps/sd2.png				    mount-wizard-2
-usr/share/pixmaps/sfs.png				    edit-sfs-pcmanfm,edit-sfs-thunar
+usr/share/pixmaps/sfs.png				    edit-sfs-pcmanfm-qt,edit-sfs-thunar,edit-sfs-pcmanfm
 usr/share/pixmaps/sfsload.png				    sfsload
 usr/share/pixmaps/shutdown-lumina.png			    lumina-desktop-debdog
 usr/share/pixmaps/shutdown.png				    jwm-setup,jwmconf
-usr/share/pixmaps/simpleHTTPserver.png			    simple-python-http-server
+usr/share/pixmaps/simpleHTTPfman.png			    simple-http-filemanager
+usr/share/pixmaps/simpleHTTPserver.png			    simple-python-http-server,simple-python3-http-server
 usr/share/pixmaps/snappie.png				    snappie
 usr/share/pixmaps/sns.xpm				    sns
 usr/share/pixmaps/soundcard.png				    sound-card-selector
