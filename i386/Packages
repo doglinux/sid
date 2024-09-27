@@ -3807,6 +3807,26 @@ Description: library to read and control CD-ROM
  so applications that use this library also have the ability to read
  disc images as though they were CD's.
 
+Package: libcpufreq0
+Architecture: i386
+Version: 008-2
+Priority: optional
+Section: libs
+Source: cpufrequtils
+Maintainer: Seunghun Han <kkamagui@gmail.com>
+Installed-Size: 49
+Depends: libc6 (>= 2.7)
+Filename: ./libcpufreq0_008-2_i386.deb
+Size: 14444
+MD5sum: 515a7db6172405f8aa0f989e7cb56098
+SHA1: b7f93bd10e16107d0dac7d16dd809bb7bce2cf44
+SHA256: 24b8ec61cc5e3b4d904cf2af58c5c1efbcf07d7421979ee7714fcd7416b6c6dc
+SHA512: b4b275c8e2a1a571167725509db912482d4838dea5b42927b79010e8257d310a46c146141487f226e7865ba865874c14d06f6e21bf18138151be18aeab598491
+Homepage: http://kernel.org/pub/linux/utils/kernel/cpufreq/cpufrequtils.html
+Description: shared library to deal with the cpufreq Linux kernel feature
+ This library provide an unified method to access the CPUFreq kernel
+ interface.
+
 Package: libcrystalhd3
 Architecture: i386
 Version: 1:0.0~git20110715.fdd2f19-13

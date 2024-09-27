@@ -1080,6 +1080,8 @@ usr/lib/libau.so.2.10					    aufs-tools
 usr/lib/libbacon.a					    bacon
 usr/lib/libcd.so					    iupluacontrols-stretch-gtk2
 usr/lib/libcdlua53.so					    iupluacontrols-stretch-gtk2
+usr/lib/libcpufreq.so.0					    libcpufreq0
+usr/lib/libcpufreq.so.0.0.0				    libcpufreq0
 usr/lib/libcrypto.so.0.9.8				    libssl0.9.8
 usr/lib/libdvdcss.so					    libdvdcss
 usr/lib/libdvdcss.so.2					    libdvdcss
@@ -9399,6 +9401,8 @@ usr/share/doc/libcdio13/changelog.Debian.amd64.gz	    libcdio13
 usr/share/doc/libcdio13/changelog.Debian.gz		    libcdio13
 usr/share/doc/libcdio13/changelog.gz			    libcdio13
 usr/share/doc/libcdio13/copyright			    libcdio13
+usr/share/doc/libcpufreq0/changelog.Debian.gz		    libcpufreq0
+usr/share/doc/libcpufreq0/copyright			    libcpufreq0
 usr/share/doc/libcrystalhd3/changelog.Debian.gz		    libcrystalhd3
 usr/share/doc/libcrystalhd3/copyright			    libcrystalhd3
 usr/share/doc/libdirectfb-1.2-9/README.gz		    libdirectfb-1.2-9
