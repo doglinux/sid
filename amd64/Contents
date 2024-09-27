@@ -30,10 +30,12 @@ etc/gftp/gftprc						    gftp-common
 etc/hostapd.conf.open					    wlanmaker
 etc/hostapd.conf.wpa2					    wlanmaker
 etc/hp/hplip.conf					    hplip-print-scan
+etc/init.d/cpufrequtils					    cpufrequtils
 etc/init.d/elogind					    elogind
 etc/init.d/firewall-ng.sh				    firewall-ng
 etc/init.d/firewall.sh					    peasyfwmon
 etc/init.d/frisbee					    frisbee
+etc/init.d/loadcpufreq					    cpufrequtils
 etc/init.d/rc.network-start				    PeasyWiFi
 etc/init.d/rc.yassm					    yassm
 etc/init.d/sfsunload					    sfsload
@@ -705,6 +707,9 @@ usr/bin/cddetect					    pburn
 usr/bin/cddetect_quick					    pburn
 usr/bin/cdrecord					    pburn
 usr/bin/ceni						    ceni
+usr/bin/cpufreq-aperf					    cpufrequtils
+usr/bin/cpufreq-info					    cpufrequtils
+usr/bin/cpufreq-set					    cpufrequtils
 usr/bin/defaultconnect					    frisbee
 usr/bin/domycommand					    domycommand
 usr/bin/domyfile					    domyfile
@@ -6025,7 +6030,7 @@ usr/local/bin/youtube-get-xterm				    youtube-get
 usr/local/bin/youtube-get2				    youtube-get2
 usr/local/bin/youtube-get3				    youtube-get3
 usr/local/bin/yradio					    yradio
-usr/local/bin/yt-dlp					    youtube-get3
+usr/local/bin/yt-dlp					    youtube-get3,yt-dlp
 usr/local/bin/zenity					    zenity-portable
 usr/local/conky-clock/Analog_clock/choice.sh		    conkyclock
 usr/local/conky-clock/Analog_clock/clock.lua		    conkyclock
@@ -9241,6 +9246,11 @@ usr/share/doc/ceni/copyright				    ceni
 usr/share/doc/conky/NEWS.Debian.gz			    conky
 usr/share/doc/conky/changelog.Debian.gz			    conky
 usr/share/doc/conky/copyright				    conky
+usr/share/doc/cpufrequtils/README.Debian		    cpufrequtils
+usr/share/doc/cpufrequtils/changelog.Debian.gz		    cpufrequtils
+usr/share/doc/cpufrequtils/copyright			    cpufrequtils
+usr/share/doc/cpufrequtils/examples/cpufrequtils.loadcpufreq.sample cpufrequtils
+usr/share/doc/cpufrequtils/examples/cpufrequtils.sample	    cpufrequtils
 usr/share/doc/elogind/README.md.gz			    elogind
 usr/share/doc/elogind/changelog.Debian.gz		    elogind
 usr/share/doc/elogind/copyright				    elogind
@@ -10956,6 +10966,7 @@ usr/share/icons/hicolor/scalable/apps/leafpad.svg	    leafpad
 usr/share/icons/hicolor/scalable/apps/roxterm.svg	    roxterm-common
 usr/share/info/wget.info.gz				    wget
 usr/share/lintian/overrides/aufs-tools			    aufs-tools
+usr/share/lintian/overrides/cpufrequtils		    cpufrequtils
 usr/share/lintian/overrides/elogind			    elogind
 usr/share/lintian/overrides/epdfview			    epdfview
 usr/share/lintian/overrides/firefox-esr			    firefox-esr
@@ -11017,6 +11028,7 @@ usr/share/locale/br/LC_MESSAGES/leafpad.mo		    leafpad
 usr/share/locale/bs/LC_MESSAGES/GConf2.mo		    gconf2-common
 usr/share/locale/bs/LC_MESSAGES/obkey.mo		    obkey
 usr/share/locale/ca/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/ca/LC_MESSAGES/cpufrequtils.mo		    cpufrequtils
 usr/share/locale/ca/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/ca/LC_MESSAGES/epdfview.mo		    epdfview
 usr/share/locale/ca/LC_MESSAGES/evince.mo		    evince
@@ -11027,6 +11039,7 @@ usr/share/locale/ca/LC_MESSAGES/wget.mo			    wget
 usr/share/locale/ca@valencia/LC_MESSAGES/GConf2.mo	    gconf2-common
 usr/share/locale/ca@valencia/LC_MESSAGES/evince.mo	    evince
 usr/share/locale/cs/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/cs/LC_MESSAGES/cpufrequtils.mo		    cpufrequtils
 usr/share/locale/cs/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/cs/LC_MESSAGES/epdfview.mo		    epdfview
 usr/share/locale/cs/LC_MESSAGES/evince.mo		    evince
@@ -11047,6 +11060,7 @@ usr/share/locale/da/LC_MESSAGES/openbox.mo		    openbox
 usr/share/locale/da/LC_MESSAGES/rox.mo			    rox-filer
 usr/share/locale/da/LC_MESSAGES/wget.mo			    wget
 usr/share/locale/de/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/de/LC_MESSAGES/cpufrequtils.mo		    cpufrequtils
 usr/share/locale/de/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/de/LC_MESSAGES/emelfm2.mo		    emelfm2
 usr/share/locale/de/LC_MESSAGES/epdfview.mo		    epdfview
@@ -11128,6 +11142,7 @@ usr/share/locale/fi/LC_MESSAGES/openbox.mo		    openbox
 usr/share/locale/fi/LC_MESSAGES/rox.mo			    rox-filer
 usr/share/locale/fi/LC_MESSAGES/wget.mo			    wget
 usr/share/locale/fr/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/fr/LC_MESSAGES/cpufrequtils.mo		    cpufrequtils
 usr/share/locale/fr/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/fr/LC_MESSAGES/emelfm2.mo		    emelfm2
 usr/share/locale/fr/LC_MESSAGES/epdfview.mo		    epdfview
@@ -11195,6 +11210,7 @@ usr/share/locale/id/LC_MESSAGES/leafpad.mo		    leafpad
 usr/share/locale/id/LC_MESSAGES/wget.mo			    wget
 usr/share/locale/is/LC_MESSAGES/GConf2.mo		    gconf2-common
 usr/share/locale/it/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/it/LC_MESSAGES/cpufrequtils.mo		    cpufrequtils
 usr/share/locale/it/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/it/LC_MESSAGES/epdfview.mo		    epdfview
 usr/share/locale/it/LC_MESSAGES/evince.mo		    evince
@@ -11311,6 +11327,7 @@ usr/share/locale/pl/LC_MESSAGES/uextract.mo		    uextract
 usr/share/locale/pl/LC_MESSAGES/wget.mo			    wget
 usr/share/locale/ps/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/pt/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/pt/LC_MESSAGES/cpufrequtils.mo		    cpufrequtils
 usr/share/locale/pt/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/pt/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/pt/LC_MESSAGES/gftp.mo			    gftp-common
@@ -11522,6 +11539,9 @@ usr/share/man/man1/auibusy.1.gz				    aufs-tools
 usr/share/man/man1/bacon.1.gz				    bacon
 usr/share/man/man1/busctl.1.gz				    elogind
 usr/share/man/man1/ceni.1p.gz				    ceni
+usr/share/man/man1/cpufreq-aperf.1.gz			    cpufrequtils
+usr/share/man/man1/cpufreq-info.1.gz			    cpufrequtils
+usr/share/man/man1/cpufreq-set.1.gz			    cpufrequtils
 usr/share/man/man1/elogind-inhibit.1.gz			    elogind
 usr/share/man/man1/emelfm2.1				    emelfm2
 usr/share/man/man1/empty.1.gz				    empty-expect

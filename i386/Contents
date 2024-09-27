@@ -43,10 +43,12 @@ etc/gconf/gconf.xml.defaults/%gconf-tree.xml		    gnome-mplayer-1.0.7
 etc/hostapd.conf.open					    wlanmaker
 etc/hostapd.conf.wpa2					    wlanmaker
 etc/hp/hplip.conf					    hplip-print-scan
+etc/init.d/cpufrequtils					    cpufrequtils
 etc/init.d/elogind					    elogind
 etc/init.d/firewall-ng.sh				    firewall-ng
 etc/init.d/firewall.sh					    peasyfwmon
 etc/init.d/frisbee					    frisbee
+etc/init.d/loadcpufreq					    cpufrequtils
 etc/init.d/network.sh					    wifibox-dhcpcd,wifibox
 etc/init.d/rc.functions					    wifibox-dhcpcd,wifibox
 etc/init.d/rc.network-start				    PeasyWiFi
@@ -819,6 +821,9 @@ usr/bin/cddetect_quick					    pburn
 usr/bin/cdrecord					    pburn
 usr/bin/ceni						    ceni
 usr/bin/conky						    conky-all,conky-std,conky-cli
+usr/bin/cpufreq-aperf					    cpufrequtils
+usr/bin/cpufreq-info					    cpufrequtils
+usr/bin/cpufreq-set					    cpufrequtils
 usr/bin/defaultconnect					    ceni,wifibox,wifibox-dhcpcd,frisbee
 usr/bin/dillo						    dillo
 usr/bin/dillo-install-hyphenation			    dillo
@@ -2981,7 +2986,7 @@ usr/local/bin/youtube-get-xterm				    youtube-get
 usr/local/bin/youtube-get2				    youtube-get2
 usr/local/bin/youtube-get3				    youtube-get3
 usr/local/bin/yradio					    yradio
-usr/local/bin/yt-dlp					    youtube-get3
+usr/local/bin/yt-dlp					    youtube-get3,yt-dlp
 usr/local/bin/zenity					    zenity-portable
 usr/local/conky-clock/Analog_clock/choice.sh		    conkyclock
 usr/local/conky-clock/Analog_clock/clock.lua		    conkyclock
@@ -6832,6 +6837,11 @@ usr/share/doc/conky/NEWS.Debian.gz			    conky
 usr/share/doc/conky/changelog.Debian.gz			    conky
 usr/share/doc/conky/changelog.gz			    conky
 usr/share/doc/conky/copyright				    conky
+usr/share/doc/cpufrequtils/README.Debian		    cpufrequtils
+usr/share/doc/cpufrequtils/changelog.Debian.gz		    cpufrequtils
+usr/share/doc/cpufrequtils/copyright			    cpufrequtils
+usr/share/doc/cpufrequtils/examples/cpufrequtils.loadcpufreq.sample cpufrequtils
+usr/share/doc/cpufrequtils/examples/cpufrequtils.sample	    cpufrequtils
 usr/share/doc/dillo/user_help.html			    dillo
 usr/share/doc/dmmediaconverter/changelog.gz		    dmmediaconverter
 usr/share/doc/dmmediaconverter/copyright		    dmmediaconverter
@@ -9857,6 +9867,7 @@ usr/share/icons/oxygen/8x8				    oxygen-icon-theme-light
 usr/share/icons/oxygen/index.theme			    oxygen-icon-theme-light
 usr/share/icons/x-office-document.png			    evince
 usr/share/lintian/overrides/aufs-tools			    aufs-tools
+usr/share/lintian/overrides/cpufrequtils		    cpufrequtils
 usr/share/lintian/overrides/elogind			    elogind
 usr/share/lintian/overrides/epdfview			    epdfview
 usr/share/lintian/overrides/firefox-esr			    firefox-esr
@@ -9913,6 +9924,7 @@ usr/share/locale/bs/LC_MESSAGES/GConf2.mo		    gconf2-common
 usr/share/locale/bs/LC_MESSAGES/obkey.mo		    obkey
 usr/share/locale/bs/LC_MESSAGES/xfe.mo			    xfe
 usr/share/locale/ca/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/ca/LC_MESSAGES/cpufrequtils.mo		    cpufrequtils
 usr/share/locale/ca/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/ca/LC_MESSAGES/epdfview.mo		    epdfview
 usr/share/locale/ca/LC_MESSAGES/leafpad.mo		    leafpad
@@ -9924,6 +9936,7 @@ usr/share/locale/ca@valencia/LC_MESSAGES/GConf2.mo	    gconf2-common
 usr/share/locale/ca@valencia/LC_MESSAGES/libgnome-keyring.mo libgnome-keyring-common
 usr/share/locale/ca@valencia/LC_MESSAGES/xfce4-whiskermenu-plugin.mo xfce4-whiskermenu-plugin-mod,xfce4-whiskermenu-plugin
 usr/share/locale/cs/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/cs/LC_MESSAGES/cpufrequtils.mo		    cpufrequtils
 usr/share/locale/cs/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/cs/LC_MESSAGES/epdfview.mo		    epdfview
 usr/share/locale/cs/LC_MESSAGES/gnutls-deb0-28.mo	    libgnutls-deb0-28
@@ -9944,6 +9957,7 @@ usr/share/locale/da/LC_MESSAGES/rox.mo			    rox-filer
 usr/share/locale/da/LC_MESSAGES/xfce4-whiskermenu-plugin.mo xfce4-whiskermenu-plugin-mod,xfce4-whiskermenu-plugin
 usr/share/locale/da/LC_MESSAGES/xfe.mo			    xfe
 usr/share/locale/de/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/de/LC_MESSAGES/cpufrequtils.mo		    cpufrequtils
 usr/share/locale/de/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/de/LC_MESSAGES/emelfm2.mo		    emelfm2
 usr/share/locale/de/LC_MESSAGES/epdfview.mo		    epdfview
@@ -10027,6 +10041,7 @@ usr/share/locale/fi/LC_MESSAGES/openbox.mo		    openbox
 usr/share/locale/fi/LC_MESSAGES/rox.mo			    rox-filer
 usr/share/locale/fi/LC_MESSAGES/xfce4-whiskermenu-plugin.mo xfce4-whiskermenu-plugin-mod,xfce4-whiskermenu-plugin
 usr/share/locale/fr/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/fr/LC_MESSAGES/cpufrequtils.mo		    cpufrequtils
 usr/share/locale/fr/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/fr/LC_MESSAGES/emelfm2.mo		    emelfm2
 usr/share/locale/fr/LC_MESSAGES/epdfview.mo		    epdfview
@@ -10092,6 +10107,7 @@ usr/share/locale/id/LC_MESSAGES/xfce4-whiskermenu-plugin.mo xfce4-whiskermenu-pl
 usr/share/locale/is/LC_MESSAGES/GConf2.mo		    gconf2-common
 usr/share/locale/is/LC_MESSAGES/xfce4-whiskermenu-plugin.mo xfce4-whiskermenu-plugin-mod,xfce4-whiskermenu-plugin
 usr/share/locale/it/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/it/LC_MESSAGES/cpufrequtils.mo		    cpufrequtils
 usr/share/locale/it/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/it/LC_MESSAGES/epdfview.mo		    epdfview
 usr/share/locale/it/LC_MESSAGES/findnrun.mo		    findnrun-nls
@@ -10204,6 +10220,7 @@ usr/share/locale/pl/LC_MESSAGES/xfce4-whiskermenu-plugin.mo xfce4-whiskermenu-pl
 usr/share/locale/pl/LC_MESSAGES/xfe.mo			    xfe
 usr/share/locale/pt-PT/LC_MESSAGES/jwm.mo		    jwm
 usr/share/locale/pt/LC_MESSAGES/GConf2.mo		    gconf2-common
+usr/share/locale/pt/LC_MESSAGES/cpufrequtils.mo		    cpufrequtils
 usr/share/locale/pt/LC_MESSAGES/elogind.mo		    elogind
 usr/share/locale/pt/LC_MESSAGES/leafpad.mo		    leafpad
 usr/share/locale/pt/LC_MESSAGES/libgnome-keyring.mo	    libgnome-keyring-common
@@ -10415,6 +10432,9 @@ usr/share/man/man1/bacon.1.gz				    bacon
 usr/share/man/man1/busctl.1.gz				    elogind
 usr/share/man/man1/ceni.1p.gz				    ceni
 usr/share/man/man1/conky.1.gz				    conky-all,conky-std,conky-cli
+usr/share/man/man1/cpufreq-aperf.1.gz			    cpufrequtils
+usr/share/man/man1/cpufreq-info.1.gz			    cpufrequtils
+usr/share/man/man1/cpufreq-set.1.gz			    cpufrequtils
 usr/share/man/man1/dillo.1.gz				    dillo
 usr/share/man/man1/elogind-inhibit.1.gz			    elogind
 usr/share/man/man1/emelfm2.1				    emelfm2
