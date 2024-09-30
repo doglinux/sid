@@ -7912,11 +7912,11 @@ Maintainer: root@jessie
 Installed-Size: 56
 Depends: libc6, gtkdialog, yad, rsync, cryptsetup-dd
 Filename: ./porteusbootscripts_1.2.1_all.deb
-Size: 20948
-MD5sum: c5c04095f4ec191517a803f5f5abe363
-SHA1: ce4031b4b7ff3a7f33f4f578f8c5ad6dfdf13ca5
-SHA256: 55bb0f7258bed90ce2a8ac6dda38d2895e2b4b2b84cdce4f5ceae30ab38d7daf
-SHA512: 3ab42e67a37345fe6042c1aad6efe833b39493293f4ac737decbc620646802b8486375d00aae4c042ec034ca8b7d3d3a8d766882e11d6a571c3c6d79e377a9b9
+Size: 20964
+MD5sum: e1bf22a6818ffb7bb2e25a997ee51928
+SHA1: d3de848bf13a0793e5e4809a0ec9b5d942cf96cb
+SHA256: 5d99e13bfccd97a806021fcdfa58adf0ba59c04e26221dfed1ad682f30e91d80
+SHA512: 62d6a4b2c967e240d79052970d703234ae4e5644e05baebd9598f75c37ca46c85048e88ed8248e82c4c83c72c20f44b9a21603f18d062b881182e9eb0e10fdbf
 Description: Porteus-boot helper-scripts (Note: works only on DebianDog)
  This version has included the scripts for the new-save-setup
  Note: Removing this package does not make any change.
