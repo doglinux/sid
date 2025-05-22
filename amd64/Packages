@@ -9321,30 +9321,6 @@ SHA256: bb96449787b78368e02f2a5f00712fd6072f3374361debafe4751809e4eb0567
 SHA512: 1888ce926dd15593d5ef29803d96ccf81b5a408786ff0872ff8d1b6787ffe7be5d45054e8fb04f0cbbcc7758e7fd3106e5dcf08af080e5eb2717a7aa574131b9
 Description: Simple Audio CD ripper
 
-Package: slim
-Architecture: amd64
-Version: 1:1.3.6-5.4
-Priority: optional
-Section: x11
-Maintainer: Nobuhiro Iwamatsu <iwamatsu@debian.org>
-Installed-Size: 2002
-Provides: x-display-manager
-Depends: libc6 (>= 2.38), libgcc-s1 (>= 3.0), libjpeg62-turbo (>= 1.3.1), libpam0g (>= 0.99.7.1), libpng16-16t64 (>= 1.6.2), libstdc++6 (>= 13.1), libx11-6, libxext6, libxft2 (>> 2.1.1), libxmu6 (>= 2:1.1.3), libxrandr2 (>= 2:1.2.99.3), debconf (>= 1.2.9) | debconf-2.0, dbus, lsb-base (>= 3.0-6)
-Recommends: xterm
-Suggests: scrot, xauth
-Filename: ./slim_1.3.6-5.4_amd64.deb
-Size: 1613360
-MD5sum: 2b12d16ba4cc211a2436cee8d357eccf
-SHA1: 60c7588c92978305c1210b672b86f950db174254
-SHA256: 895c97ca271a456fa0deabbabdbad6c84135c209081f0b542bc1f950b92e6c2f
-SHA512: fc3b5322226bba2c8e512f65ad12c93844983833bd0aca50b6fe94bc248d68284d55c427d7712af3df942e1892ff9a31cb452bf7f954b90f8a78444189f874b0
-Homepage: http://sourceforge.net/projects/slim.berlios/
-Description: desktop-independent graphical login manager for X11
- SLiM aims to be light, simple and independent from the various
- desktop environments. Although completely configurable through
- themes and an option file. It is particularly suitable for machines
- that don't require remote logins.
-
 Package: snappie
 Architecture: amd64
 Version: 1.1-1
