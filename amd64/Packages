@@ -2974,6 +2974,36 @@ Description: GTK+ interface for MPlayer
  used with Gecko Mediaplayer and is the modern replacement for
  mplayerplug-in (from the same author).
 
+Package: gnome-mplayer-1.0.6
+Architecture: amd64
+Version: 1.0.9-5
+Priority: optional
+Section: video
+Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Installed-Size: 1275
+Depends: mplayer, libasound2, libatk1.0-0, libc6, libcairo2, libdbus-1-3, libdbus-glib-1-2, libfontconfig1, libfreetype6, libgdk-pixbuf2.0-0, libglib2.0-0, libgpod4, libgtk2.0-0, libpango-1.0-0, libpangocairo-1.0-0, libpangoft2-1.0-0, libx11-6, libxss1, libnotify4, libpulse-mainloop-glib0, libglapi-mesa
+Suggests: gecko-mediaplayer
+Replaces: peasymp3
+Filename: ./gnome-mplayer-1.0.6_1.0.9-5_amd64.deb
+Size: 177176
+MD5sum: 1b089e2200d7ad14936d55f797928eb8
+SHA1: 985c68f4ebd447206a6064fad5c1f268ea3aa999
+SHA256: 518dfc68c01d5d0044c35b1b8ffab9d8fc750fa8eaafa6557a14025f4d8d4406
+SHA512: a92988adb16699e8ebdcf8d3459f32ff57e9b5c58e969de77aab67a0b660eec413693ca207ac84b169ff664fb8f215e06c2aab6b2365eb0b98af204962039ff3
+Homepage: http://code.google.com/p/gnome-mplayer
+Description: GTK+ interface for MPlayer
+ The power of MPlayer combined with a friendly interface for your desktop.
+ You can play all your multimedia (audio, video, CD, DVDs, and VCDs, streams
+ etc. with full DVD and MKV chapter support), organize, sort and create
+ playlists, take screenshots while playing videos, be notified about media
+ changes, retrieve cover art and more.
+ Gnome-MPlayer fully supports subtitles giving the ability to specify
+ preferred audio and subtitle languages.
+ .
+ The player can be used to play media on websites from your browser when
+ used with Gecko Mediaplayer and is the modern replacement for
+ mplayerplug-in (from the same author).
+
 Package: googledrivegui2
 Architecture: amd64
 Version: 2.1.0
