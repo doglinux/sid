@@ -8030,6 +8030,8 @@ usr/local/lib/X11/pixmaps/qiv.png			    qiv-slideshow
 usr/local/lib/X11/pixmaps/question.png			    yalarm2
 usr/local/lib/libcd.so					    iupluacontrols-stretch-gtk2
 usr/local/lib/libcdlua53.so				    iupluacontrols-stretch-gtk2
+usr/local/lib/libglapi.so.0				    gnome-mplayer-1.0.6
+usr/local/lib/libglapi.so.0.0.0				    gnome-mplayer-1.0.6
 usr/local/lib/libgmlib.so				    gnome-mplayer-1.0.6
 usr/local/lib/libgmlib.so.1				    gnome-mplayer-1.0.6
 usr/local/lib/libgmlib.so.1.0.8				    gnome-mplayer-1.0.6

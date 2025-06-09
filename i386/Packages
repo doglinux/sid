@@ -10479,6 +10479,42 @@ Description: Install kernel in chroot
 
 Package: upgrade-kernel
 Architecture: all
+Version: 1.21.0
+Priority: optional
+Section: utilities
+Maintainer: fredx181
+Installed-Size: 2800
+Depends: libc6, xterm, xz-utils, cpio, bsdutils, gtkdialog, unionfs-fuse
+Conflicts: upgrade-kernel
+Replaces: upgrade-kernel
+Filename: ./upgrade-kernel_1.21.0_all.deb
+Size: 1123764
+MD5sum: dac19bda4629cc8deb30254ae1a9c5e7
+SHA1: e51692e9ccf12083abac745304d447b04a308d06
+SHA256: fe1ddb9569d6b9ed5c65459012f6675522a2fcb642dc32cd1c08293054a37c3c
+SHA512: ef9d1eeea3c0f7615d4b3f73228b15726a5df4930ca79b9fb28d3fb046db2d820533d6ada8c6cc368f0b2d6dcb2f4157013662bdc34c622dc1bc909a3abc3de4
+Description: Install kernel in chroot
+ And create initrd1.xz and initrd.img, modified by gumanzoy, to create much smaller initrd1.xz
+ v1.4.2, added support for booting with encrypted savefile.
+ v1.5.0, create initrd for porteus-boot method taken from Tomas M, much smaller size.
+ v1.6.0, small change for order of modules loaded in initrd1.xz.
+ v1.7.0, btrfs support.
+ v1.8.0, support for 'usr-merged' system
+ v1.9.0, small fix for partition choice
+ v1.11.0, added i915 kernel module to the initrd1.xz
+ v1.12.0, reverted changes done at v1.11.0
+ v1.14.0, when create initrd for porteus-boot it will display full .squashfs names again at boot
+ v1.15.0, pfull= option (initrd1.xz) added for 'pseudo full' install support 
+ v1.16.0, changes from gumanzoy, see https://forum.puppylinux.com/viewtopic.php?p=133971#p133971
+ v1.17.0, changes from gumanzoy, see https://forum.puppylinux.com/viewtopic.php?p=134361#p134361
+ v1.18.0, fixed support for encrypted save file
+ v1.19.0, added support in initrd for some DELL computers (e.g. PERC5i)
+ v1.20.0, change only for when using pfull (Pseudo full install),
+  the created initrd1.xz supports now booting (in case of used pfull=/...) without any .squashfs modules loaded
+ v1.21.0, fix for usr-merged (changed /lib/modules to /usr/lib/modules in upgrade-kernel script)
+
+Package: upgrade-kernel
+Architecture: all
 Version: 1.7.0
 Priority: optional
 Section: utilities
@@ -11964,6 +12000,32 @@ MD5sum: ace9f6f86514c99d08ba7cbd643e0526
 SHA1: 873e8a7f0db5338294601e67d06da9e176c5f12f
 SHA256: 117ee7aab338042828df248941108b9c400328da08a3c701417d041a2eaa79ee
 SHA512: fdfb98a546ea311859f324152d389d92073273636de3653159560cb60000b320f96756542d5c971830cecf5f8a853f4dd2396082ef6c51e93b62691671749445
+Homepage: https://github.com/yt-dlp/yt-dlp
+Description: Downloader of videos from web page.
+ This tool is a small command-line program to download videos from webpage
+ that don't provide direct links to the videos served.
+ .
+ This tool allows the user, among other things, to choose a specific video
+ quality to download (if available) or let the program automatically
+ determine the best (or worst) quality video to grab.  It supports
+ downloading entire playlists and all videos from a given user.
+ .
+ yt-dlp is a youtube-dl fork.
+
+Package: yt-dlp
+Architecture: all
+Version: 2:2025.05.22
+Priority: optional
+Maintainer: fredx181
+Installed-Size: 3187
+Depends: python3:any
+Replaces: youtube-get3, youtube-get2
+Filename: ./yt-dlp_2025.05.22_all.deb
+Size: 2958764
+MD5sum: 08c686bce3f0f77ba0c721ac44c36829
+SHA1: edd83639284c08a95558d74757e558156043dd23
+SHA256: d651b5432eb2618deaf6468515e5ddc46d1eedafe84f15f3d14cd79271491fe3
+SHA512: 87bb5b469b0c1f0643b1e9dc7168733492079305e72631b81a92ad018d9b86efccc6bf88e974a990262901cfb5259cb823627cbcd52da66a5f12cfc53bb943a8
 Homepage: https://github.com/yt-dlp/yt-dlp
 Description: Downloader of videos from web page.
  This tool is a small command-line program to download videos from webpage
