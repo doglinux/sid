@@ -662,6 +662,7 @@ root/Startup/exec_fwstatus-autostart			    firewall-ng
 root/Startup/exec_lxinput-autostart			    lxinputsave
 root/Startup/exec_lxrandr-autostart			    lxrandr-save-fix
 root/Startup/killmenu-cached				    jwm-setup,jwmconf
+root/Startup/my-utils-tray				    my-utils
 root/Startup/network_tray.sh				    frisbee
 root/Startup/p910nd-start				    p910nd-print-server
 root/Startup/peasyfwmon_tray				    peasyfwmon
@@ -5921,6 +5922,7 @@ usr/local/bin/mountlink					    debdogmountscripts
 usr/local/bin/move-in-crypt				    move-in-crypt
 usr/local/bin/mplayer					    gnome-mplayer-1.0.6
 usr/local/bin/ms-sys					    ms-sys
+usr/local/bin/my-utils					    my-utils
 usr/local/bin/obshutdown				    obshutdown
 usr/local/bin/openbox-menu				    jwm-setup-dd64,jwmconf,jwm-setup
 usr/local/bin/p910nd-control				    p910nd-print-server
@@ -12128,6 +12130,7 @@ usr/share/pixmaps/mk-initrd.png				    upgrade-kernel
 usr/share/pixmaps/mkiso.png				    quick-remaster
 usr/share/pixmaps/mmview.png				    mm-view
 usr/share/pixmaps/mplayer.png				    youtube-get2,youtube-get,youtube-get3
+usr/share/pixmaps/my-utils-24.png			    my-utils
 usr/share/pixmaps/netmon_wce/cell1_0.svg		    frisbee
 usr/share/pixmaps/netmon_wce/cell1_1.svg		    frisbee
 usr/share/pixmaps/netmon_wce/cell1_2.svg		    frisbee
