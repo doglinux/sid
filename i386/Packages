@@ -9519,6 +9519,31 @@ Description: desktop-independent graphical login manager for X11
  themes and an option file. It is particularly suitable for machines
  that don't require remote logins.
 
+Package: slim
+Architecture: i386
+Version: 1:1.4.1-1devuan1
+Priority: optional
+Section: x11
+Origin: Devuan
+Maintainer: Devuan Dev Team <devuan-dev@lists.dyne.org>
+Installed-Size: 897
+Provides: x-display-manager
+Depends: dbus, debconf (>= 1.2.9) | debconf-2.0, default-logind | logind | consolekit, x11-xserver-utils, libc6 (>= 2.38), libgcc-s1 (>= 3.0), libjpeg62-turbo (>= 1.3.1), libpam0g (>= 0.99.7.1), libpng16-16t64 (>= 1.6.2), libstdc++6 (>= 13.1), libx11-6, libxext6, libxft2 (>> 2.1.1), libxmu6 (>= 2:1.1.3), libxrandr2 (>= 2:1.2.99.3)
+Recommends: xterm
+Suggests: scrot, xauth
+Filename: ./slim_1.4.1-1devuan1_i386.deb
+Size: 565780
+MD5sum: 2e6fbbeb4e708454fbf7d070394c422a
+SHA1: d48c6c2d13778418d2996ba459bdac8ca0e472b8
+SHA256: f6b0ebff4e1f18e8b2162ffbb816226db7a3f847ceb9ca9841d03e0269eeb5c7
+SHA512: 9e355eb7d33ad7b916642cd3573e0623aba721dfe37715a420eab2e3ed2824e6254777d9db14be43050caa01f88df62596d00b54787582060c3f46108395e42c
+Homepage: http://sourceforge.net/projects/slim-fork/
+Description: desktop-independent graphical login manager for X11
+ SLiM aims to be light, simple and independent from the various
+ desktop environments. Although completely configurable through
+ themes and an option file. It is particularly suitable for machines
+ that don't require remote logins.
+
 Package: snappie
 Architecture: i386
 Version: 1.1-1

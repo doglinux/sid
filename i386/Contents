@@ -281,6 +281,7 @@ lib/i386-linux-gnu/libudev.so.0				    libudev0
 lib/i386-linux-gnu/libudev.so.0.13.0			    libudev0
 lib/i386-linux-gnu/security/pam_elogind.so		    libpam-elogind
 lib/libtaz.sh						    wifibox-dhcpcd,wifibox
+lib/systemd/system/slim.service				    slim
 lib/udev/rules.d/70-power-switch.rules			    elogind
 lib/udev/rules.d/70-uaccess.rules			    elogind
 lib/udev/rules.d/71-seat.rules				    elogind
@@ -11554,6 +11555,9 @@ usr/share/slim/themes/debian-spacefun/slim.theme	    slim
 usr/share/slim/themes/default/background.jpg		    slim
 usr/share/slim/themes/default/panel.png			    slim
 usr/share/slim/themes/default/slim.theme		    slim
+usr/share/slim/themes/original/background.jpg		    slim
+usr/share/slim/themes/original/panel.png		    slim
+usr/share/slim/themes/original/slim.theme		    slim
 usr/share/slitaz/network.conf_migration			    wifibox-dhcpcd,wifibox
 usr/share/sounds/osmo/alarm.wav				    osmo-portable
 usr/share/themes/Artwiz-boxed/openbox-3/themerc		    openbox

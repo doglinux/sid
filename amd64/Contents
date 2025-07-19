@@ -4,6 +4,7 @@ bin/loginctl						    elogind
 bin/mount						    mount
 bin/umount						    mount
 bin/usleep						    pburn
+etc/X11/Xsession.d/20slim_locale			    slim
 etc/X11/app-defaults/Xvidtune				    x11-xserver-utils
 etc/X11/openbox						    openbox
 etc/alsa/conf.d/20-bluealsa.conf			    bluealsa
@@ -39,10 +40,13 @@ etc/init.d/loadcpufreq					    cpufrequtils
 etc/init.d/rc.network-start				    PeasyWiFi
 etc/init.d/rc.yassm					    yassm
 etc/init.d/sfsunload					    sfsload
+etc/init.d/slim						    slim
 etc/init.d/start-pup-volume-monitor			    pup-volume-monitor
 etc/init.d/start-tzupdate				    tzupdate
+etc/logrotate.d/slim					    slim
 etc/menu-methods/openbox				    openbox
 etc/pam.d/elogind-user					    libpam-elogind
+etc/pam.d/slim						    slim
 etc/pavrecord/.pavrecordrc				    pavrecord
 etc/ppp/chatscripts/gprs-connect-chat			    frisbee
 etc/ppp/chatscripts/gprs-disconnect-chat		    frisbee
@@ -94,6 +98,7 @@ etc/skel/Startup/peasyfwmon_tray			    peasyfwmon
 etc/skel/Startup/peasywifi_tray				    PeasyWiFi
 etc/skel/Startup/rshift-gui-lite			    redshift-gui-lite
 etc/skel/startup-jwm					    jwm-setup-dd64,jwmconf,jwm-setup
+etc/slim.conf						    slim
 etc/sudoers.d/peasywifi					    PeasyWiFi
 etc/udhcpd.conf						    wlanmaker
 etc/weav/LICENSE					    weav
@@ -170,6 +175,7 @@ lib/elogind/elogind-uaccess-command			    elogind
 lib/elogind/system-shutdown/.keep_dir			    elogind
 lib/elogind/system-sleep/.keep_dir			    elogind
 lib/systemd/system/bluealsa.service			    bluealsa
+lib/systemd/system/slim.service				    slim
 lib/udev/rules.d/60-bluealsa.rules			    bluealsa
 lib/udev/rules.d/70-power-switch.rules			    elogind
 lib/udev/rules.d/70-uaccess.rules			    elogind
@@ -811,6 +817,8 @@ usr/bin/roxterm-config					    roxterm-gtk2
 usr/bin/sct						    sct
 usr/bin/sessreg						    x11-xserver-utils
 usr/bin/showrgb						    x11-xserver-utils
+usr/bin/slim						    slim
+usr/bin/slimlock					    slim
 usr/bin/squashfuse					    squashfuse
 usr/bin/straw-viewer					    straw-viewer
 usr/bin/stream2chromecast				    stream2chromecast
@@ -9765,6 +9773,13 @@ usr/share/doc/sct/changelog.Debian.amd64.gz		    sct
 usr/share/doc/sct/changelog.Debian.gz			    sct
 usr/share/doc/sct/changelog.gz				    sct
 usr/share/doc/sct/copyright				    sct
+usr/share/doc/slim/README				    slim
+usr/share/doc/slim/README.Debian			    slim
+usr/share/doc/slim/THEMES.gz				    slim
+usr/share/doc/slim/TODO					    slim
+usr/share/doc/slim/changelog.Debian.gz			    slim
+usr/share/doc/slim/changelog.gz				    slim
+usr/share/doc/slim/copyright				    slim
 usr/share/doc/stream2chromecast/changelog.Debian.gz	    stream2chromecast
 usr/share/doc/stream2chromecast/copyright		    stream2chromecast
 usr/share/doc/thunar/changelog.Debian.gz		    thunar
@@ -11048,6 +11063,7 @@ usr/share/lintian/overrides/palemoon			    palemoon
 usr/share/lintian/overrides/python2			    python2
 usr/share/lintian/overrides/python2.7			    python2.7
 usr/share/lintian/overrides/python2.7-minimal		    python2.7-minimal
+usr/share/lintian/overrides/slim			    slim
 usr/share/locale/af/LC_MESSAGES/evince.mo		    evince
 usr/share/locale/af/LC_MESSAGES/openbox.mo		    openbox
 usr/share/locale/am/LC_MESSAGES/GConf2.mo		    gconf2-common
@@ -11640,6 +11656,8 @@ usr/share/man/man1/roxterm.1.gz				    roxterm-common
 usr/share/man/man1/sct.1.gz				    sct
 usr/share/man/man1/sessreg.1.gz				    x11-xserver-utils
 usr/share/man/man1/showrgb.1.gz				    x11-xserver-utils
+usr/share/man/man1/slim.1.gz				    slim
+usr/share/man/man1/slimlock.1.gz			    slim
 usr/share/man/man1/straw-viewer.1p			    straw-viewer
 usr/share/man/man1/thunar-settings.1.gz			    thunar
 usr/share/man/man1/thunar.1.gz				    thunar
@@ -12479,6 +12497,12 @@ usr/share/screener/savers				    screener
 usr/share/screener/screener				    screener
 usr/share/screener/sxlock				    screener
 usr/share/sgml/gconf/gconf-1.0.dtd			    gconf2-common
+usr/share/slim/themes/default/background.jpg		    slim
+usr/share/slim/themes/default/panel.png			    slim
+usr/share/slim/themes/default/slim.theme		    slim
+usr/share/slim/themes/original/background.jpg		    slim
+usr/share/slim/themes/original/panel.png		    slim
+usr/share/slim/themes/original/slim.theme		    slim
 usr/share/themes/Artwiz-boxed/openbox-3/themerc		    openbox
 usr/share/themes/Bear2/openbox-3/close.xbm		    openbox
 usr/share/themes/Bear2/openbox-3/close_pressed.xbm	    openbox
