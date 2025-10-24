@@ -1399,6 +1399,20 @@ SHA256: 98de7c7491aa4cfb47a4859b4507a476e70b3e6eacae48bc3a64b164355daf07
 SHA512: 4c33a2dd9cc181705b349f303c5220b97c21c652fe9e9dee533031504f3fd575816455204be101147fa83acac7e4ca03e5ad045f7cee82435a195977a5f76711
 Description: Special DebianDog mount and drive information scripts.
 
+Package: debdogmountscripts
+Architecture: all
+Version: 1.1.0
+Maintainer: root
+Installed-Size: 73
+Depends: libc6
+Filename: ./debdogmountscripts_1.1.0_all.deb
+Size: 2516
+MD5sum: 055500c153ca6e968d4726f837bc9722
+SHA1: 7b129a5e584f0320ade4ba0b3e3dc660ad1f8730
+SHA256: ec80524c4960db3b5672d5da2409cf3a3168037f7232806c2da0b556a542910a
+SHA512: f247d5a3b01587e92491b699ee404f298e59e303622e314f3e5d9839a6ef806b7c9504f29e4cdc42d26f7aae9df80c7ba3cef1e2e5f910177e8d7063eb8acd55
+Description: Special DebianDog mount and drive information scripts.
+
 Package: desktop-drive-icons
 Architecture: amd64
 Version: 0.0.5
@@ -7015,6 +7029,40 @@ SHA1: b5fc5df5f01517ba7dca7721cff51cfdd24343b6
 SHA256: 6393e8cef766d076d6e62fe24e9ca0b3e0adf94097c66f84fb0c6a5a87de26a6
 SHA512: ae657f5511cd6d27dd8a7dedc978cf76844d45275e804716c9774bebc47c1d1f02ff239635aa40a9d4341a7a41a42b1cd2180a24dd7fcf02947de57f9bedab0c
 Description: peasyscale from rcrsn51 for Puppy linux
+
+Package: peasyscan
+Architecture: amd64
+Version: 3.2
+Priority: optional
+Section: Graphics;
+Maintainer: root
+Installed-Size: 180
+Depends: libc6, gtkdialog, netpbm, libtiff-tools, libgtk-3-0, xdialog3, wmctrl
+Filename: ./peasyscan-gtk3_3.2_amd64.deb
+Size: 64764
+MD5sum: 448c5ded069a4e5cf201703c059689c5
+SHA1: 1c83a67e2f53edddd9713c9e23ba007c743aa761
+SHA256: 56ced44f89bbc618ba0a818aa2957fa1ea69e82f860215a04dfd7a2b133fcfff
+SHA512: ac41b50774169e327d2bd192d3a38e66953c676de4a198e050e46a92c352e62b3654482b82080b4bb09401c00c2d0740587c9388931c1f72f356dd8524ffe659
+Description: Document scanning tool
+	contains the binary xscanimage-peasy
+
+Package: peasyscan
+Architecture: amd64
+Version: 3.3
+Priority: optional
+Section: Graphics;
+Maintainer: root
+Installed-Size: 180
+Depends: libc6, gtkdialog, netpbm, libtiff-tools, libgtk-3-0, xdialog3, wmctrl
+Filename: ./peasyscan-gtk3_3.3_amd64.deb
+Size: 64948
+MD5sum: 5925d47cdfa340070a817c1c24783c7e
+SHA1: 90cefa73c33c55121a86b9ee195b3074e89317b1
+SHA256: 18292aaa64a7d92d7d6cc71295dfac4965a90e318131b0fd358435d36d2192e5
+SHA512: 2e0480f004c3c3df8a1638d59462a1c35ac786af9003e297c66d67431dbbb1a3a93ddccebad63bb2483e4731a0042ef1090c949d41e5d504c6300ca77b94b13c
+Description: Document scanning tool
+	contains the binary xscanimage-peasy
 
 Package: peasyscan
 Architecture: amd64
