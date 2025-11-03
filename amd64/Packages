@@ -1413,6 +1413,20 @@ SHA256: ec80524c4960db3b5672d5da2409cf3a3168037f7232806c2da0b556a542910a
 SHA512: f247d5a3b01587e92491b699ee404f298e59e303622e314f3e5d9839a6ef806b7c9504f29e4cdc42d26f7aae9df80c7ba3cef1e2e5f910177e8d7063eb8acd55
 Description: Special DebianDog mount and drive information scripts.
 
+Package: debdogmountscripts
+Architecture: all
+Version: 1.1.1
+Maintainer: root
+Installed-Size: 73
+Depends: libc6
+Filename: ./debdogmountscripts_1.1.1_all.deb
+Size: 3084
+MD5sum: 37613b60600e524a43d194976840edc9
+SHA1: 02222de98fa95d0232788c6c9304c0cc72f53549
+SHA256: aae05f88e9428bf27bc95b44e7872bd73416527b559cba27b06e6f71fffe71d5
+SHA512: 05e82cb18f37cc235075aa00774b81d4b559796e5aaad0509f1cffb6c6f2d8b4a54f137592f5c8b9ecb01ba21a2f065218d840334fe04e5c95d575bbb2187760
+Description: Special DebianDog mount and drive information scripts.
+
 Package: desktop-drive-icons
 Architecture: amd64
 Version: 0.0.5
@@ -6635,6 +6649,22 @@ SHA256: cef8e7a9390589b246689b734bb87fad5d6714ce6dab1b6388580fc0ec696e55
 SHA512: 6effde33dc3e8145b7c09916ddfc8ea47407f4e74039697abd96f71529e79e607cb086c387f4bfd1040a64cc865ee3a1238813cc98c1cd02251cf1ff5a4cf1f8
 Description: Media player, CD player, Carousel 
   User supplies mplayer/gmplayer
+
+Package: peasymp3
+Architecture: amd64
+Version: 5.1
+Priority: optional
+Section: base
+Maintainer: rcrsn51
+Depends: libcddb-get-perl, eject, xterm, libasound2-plugin-equal, xdialog3
+Filename: ./peasymp3-gtk3_5.1_amd64.deb
+Size: 11460
+MD5sum: 5b0fd578c470c71cd4dfbeb22a8533b0
+SHA1: a456f5d372a2b2612049c3bb1c5d403d9b03e1e6
+SHA256: e1d7715db9ac7e8e0136fca320be2b0daa9d7188bb82f5974881cd5d7f1fe778
+SHA512: 73769353c7927a4a1e8b5aa6efc291073b25e473af3e88b0fb59694b9cc72aa036d24073fef0fe7dab844434797d794b0406cebf9eb74c89a9351e498f99375f
+Description: Media player, CD player, Carousel 
+  User supplies mplayer
 
 Package: peasymp3
 Architecture: amd64
