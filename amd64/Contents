@@ -969,10 +969,13 @@ usr/lib/X11/mini-icons/network_tray-xpm/wifieth-none.xpm    frisbee
 usr/lib/X11/mini-icons/network_tray-xpm/wifieth-out.xpm	    frisbee
 usr/lib/apulse/libpulse-mainloop-glib.so		    apulse
 usr/lib/apulse/libpulse-mainloop-glib.so.0		    apulse
+usr/lib/apulse/libpulse-mainloop-glib.so.0.0.6		    apulse
 usr/lib/apulse/libpulse-simple.so			    apulse
 usr/lib/apulse/libpulse-simple.so.0			    apulse
+usr/lib/apulse/libpulse-simple.so.0.1.1			    apulse
 usr/lib/apulse/libpulse.so				    apulse
 usr/lib/apulse/libpulse.so.0				    apulse
+usr/lib/apulse/libpulse.so.0.24.2			    apulse
 usr/lib/cups/filter/hpcups				    hplip-print-scan
 usr/lib/dhcpcd/X11/mini-icons/network_tray		    frisbee
 usr/lib/dhcpcd/X11/mini-icons/network_tray-xpm/dead.xpm	    frisbee
@@ -2611,6 +2614,7 @@ usr/local/bin/simpleHTTPserver				    simple-python-http-server
 usr/local/bin/simpleHTTPserver-python3			    simple-python3-http-server
 usr/local/bin/snappie					    snappie
 usr/local/bin/sound-card-selector			    sound-card-selector
+usr/local/bin/spotifytomp3				    spotifytomp3
 usr/local/bin/start-jwm					    jwm-setup,jwm-setup-dd64
 usr/local/bin/start-ntpdate				    tzupdate
 usr/local/bin/start-openbox				    jwm-setup,jwm-setup-dd64
@@ -5989,6 +5993,7 @@ usr/share/applications/simpleHTTPserver-python3.desktop	    simple-python3-http-
 usr/share/applications/simpleHTTPserver.desktop		    simple-python-http-server
 usr/share/applications/snappie.desktop			    snappie
 usr/share/applications/sound-card-selector.desktop	    sound-card-selector
+usr/share/applications/spotifytomp3.desktop		    spotifytomp3
 usr/share/applications/syncing.desktop			    diff-sync-umount
 usr/share/applications/tas.desktop			    takeashot
 usr/share/applications/thunar-bulk-rename.desktop	    thunar
@@ -9555,6 +9560,7 @@ usr/share/pixmaps/simpleHTTPfman.png			    simple-http-filemanager
 usr/share/pixmaps/simpleHTTPserver.png			    simple-python-http-server,simple-python3-http-server
 usr/share/pixmaps/snappie.png				    snappie
 usr/share/pixmaps/soundcard.png				    sound-card-selector
+usr/share/pixmaps/spotifytomp3.png			    spotifytomp3
 usr/share/pixmaps/suspend.png				    jwm-setup,jwmconf
 usr/share/pixmaps/swap2.png				    makeswap
 usr/share/pixmaps/switch.png				    jwm-setup,jwm-setup-dd64,jwmconf

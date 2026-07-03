@@ -158,6 +158,20 @@ SHA256: c7cff061ff83b4ac5bbc62c6dfb0fc6a26b90677e65c51418913095857f79924
 SHA512: c4dea3a99e465a561f6e47daa312afb29fcc5a3b60ae5564a792e61bbc33f496b89098734571ce4452a20e5ddec4ed39060fe03d08f1a9753b2f314c9aaae647
 Description: Pulseaudio emulator using alsa
 
+Package: apulse
+Architecture: amd64
+Version: 20260701
+Priority: extra
+Maintainer: rcrsn51
+Depends: libasound2 (>= 1.0.18), libc6 (>= 2.17), libglib2.0-0 (>= 2.14.0)
+Filename: ./apulse_20260701_amd64.deb
+Size: 107944
+MD5sum: 599214872446eb82c106b872db45d74b
+SHA1: d463855486c6f2081cc3617af21ede83f184be1e
+SHA256: 5df0b9c18318c61b7a8a8a3b0115fe2b538c27b4ffb53c9dee158c7276fc12d8
+SHA512: 72a7da42f49303e85148a50128bc1575cf7528bb421bb5457766cf8cdfd0640446abcc561c933f91c253551a3588ac49dbb47e78113ec2bfcd436a19462f0d14
+Description: Pulseaudio emulator using alsa
+
 Package: audio-converter
 Architecture: all
 Version: 1.7
@@ -7239,6 +7253,45 @@ Description: Warning - This package works only in DebianDog booted with porteus 
  And checkbox for more advanced cleaning options and some cosmetic changes + info button
  Version 1.7.1, fixed that if extra drivers or other kernel modules are installed in the system these are now included in the 01-filesystem.squashfs
 
+Package: quick-remaster
+Architecture: all
+Version: 1.7.2
+Maintainer: fredx181 dog@root.nl
+Installed-Size: 336
+Depends: libc6, yad, coreutils, menu, squashfs-tools, mount, sed, xterm, rsync, dpkg, findutils, procps, gsu | gksu, xorriso, isolinux, gtkdialog
+Filename: ./quick-remaster_1.7.2_all.deb
+Size: 3958980
+MD5sum: 56d9f7a0051ff11d4d4156142d6c01fb
+SHA1: 651164fcdddf1bffdfbc94bc3709b40b6f2d984f
+SHA256: 657b330291095060e20b2db1123f0ede6096831d4abf3d942d21c0df2fdbe530
+SHA512: c70ea359405d317ac43aea9ff862143899355da4c8b5665134d8b336aebd44c06971eb244bbdaaeca47a81eedb1052da190b1944e3da1731f6def3d9ef92f03b
+Description: Warning - This package works only in DebianDog booted with porteus boot-style!.
+ Included GUI version using yad: quick-remastergui
+ Bug fix: gz compression option not working in previous version 1.0.3
+ Bug fix: set the correct permissions for /tmp 
+ Fix in v 1.0.6: skip symlinks while cleaning man and doc files
+ Version 1.0.7: added option to create ISO
+ Version: 1.1.2, cleaning, do not remove /etc/rc.d
+ Version: 1.1.3, added GUI progress bar
+ Version: 1.1.5, for Devuan beowulf
+ Version 1.1.7, major bugfix, previously worked properly only when used EXIT: parameter
+ Version 1.1.9, added mksquashfs compression option zstd
+ Version 1.2.0, very different method, using mksquashfs -exclude option (e.g. for cleaning)
+ Version 1.2.1, added more info in GUI
+ Version 1.2.1, bugfix, when canceling, restore backup worked not properly
+ Version 1.2.3, bugfix, fixed that in some cases the path to the live folder not found
+ Version 1.2.4, choice to merge extra loaded .squashfs modules or not
+ Version 1.2.5, fix for mkiso script, should find frugal install path in any case now 
+ Version 1.2.6, instead excluding whole /lib/modules directory, exclude files only that exist in the extra loaded kernel module
+ Version 1.2.7, run save2flash in case of booting with EXIT parameter
+ Version 1.3.0, added info message about priority and order of kernel .squashfs
+ Version 1.4.0, Added UEFI support for creating ISO
+ Version 1.5.1, bug fixes for when chosen to merge modules and for ISO creation
+ Version 1.6.1, added checkbox for to create remaster in custom selected directory
+ And checkbox for more advanced cleaning options and some cosmetic changes + info button
+ Version 1.7.1, fixed that if extra drivers or other kernel modules are installed in the system these are now included in the 01-filesystem.squashfs 
+ Version 1.7.2, fixed that it failed when booted with pfull= (pseudo full install)
+
 Package: redshift-gui-lite
 Architecture: amd64
 Version: 0.0.4
@@ -8046,6 +8099,20 @@ SHA1: 206dac39f6d998b7c1290aec105b829f4bc0efc7
 SHA256: f24e62069a5a2499147ffeaa8cc35ee3aa5c3ea0491a300ae259fa15d17a8c7e
 SHA512: d448680c177575efd3a08801d4c825dc7d14a8af3761f93b51eae0efd5add45b2e8ab4de8483bba366669c398f56eca752c20a800046ae7750ef4d430bf41706
 Description: Select a sound card and set ALSA defaults
+
+Package: spotifytomp3
+Architecture: all
+Version: 2.0.0
+Priority: extra
+Maintainer: fredx181
+Depends: lame, alsa-utils
+Filename: ./spotifytomp3_2.0.0_all.deb
+Size: 9176
+MD5sum: f2c5aa133f2e3111a5ae161b182556b6
+SHA1: a240ae8285d6adee543ce8a5a337c9d7fe48d9d2
+SHA256: 39195872bb9d72d6715481bd38d7b078ef3191b35348d488a003e3e6d20df7f6
+SHA512: 0b56f1765177d7bcb5d5970e6a334ec9e3690752b49aa1048fa2bb1f4f7263f39fb5aebb28e98d175e58ee3caf55a8b89d3a217252640ad6989337e955f300e5
+Description: Record tracks from Spotify Web Player
 
 Package: squashfuse
 Architecture: amd64
