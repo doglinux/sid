@@ -7752,6 +7752,24 @@ SHA256: 5d0b95eb47fccbb1d32fee8c47721d8ddbe9547a8cb4e544737f7a75e4a9bbdf
 SHA512: 100ac60fb40ae9d44df91f38bed513dbffd8232a459b86ae4fc676199596f488603e138fa0b614efa27b9e6e28f532d567304c3ef6ce75d13b44c83c48073df3
 Description: Run application as unprivileged user (from root account)
 
+Package: run-as-spot
+Architecture: i386
+Version: 0.0.2
+Priority: optional
+Section: utilities
+Maintainer: fredx181
+Installed-Size: 72
+Depends: libc6, gtkdialog, xterm, dbus-x11, chpupsocket
+Conflicts: run-as-user
+Replaces: run-as-user
+Filename: ./run-as-spot_0.0.2_i386.deb
+Size: 27232
+MD5sum: 2754b5710833969632977bbdcd064a70
+SHA1: bafafc389e0f1556e3fb71fa5f19bef0adebf1c0
+SHA256: 91c68f1c88f4e0f9aee5ddbbe0b4beb21c18cc19bf1115dfe2ad74af32294960
+SHA512: 0e2226e73aa40d1272ab082557d2e77f3b99bcc09c05d210d0cef7562999d5ac1dd2344ef6157c0c4e58583fcadd6ed09ce00c93f68a25004fcf93dfdd954fb1
+Description: Run application as unprivileged user (from root account)
+
 Package: run-as-user
 Architecture: i386
 Version: 0.0.6
@@ -7798,6 +7816,22 @@ MD5sum: 6bba079c401e83d58cae4ead313c54bd
 SHA1: 01403e32c0c246ea789d72da8a16d2d3aace219c
 SHA256: 9add3e6e7aadb71b5e059567a31e9606dfa545086ef5e1c8ba22ce862f0fd1c1
 SHA512: aa3ed21aea153818eec3283173955dcf96ebb7e5d3bf03cad287cdd498ec5525d2962eb74e8469d59640e6a167bdfdb88b4ba8ae9caca24b512563bee7d305dd
+Description: Run application as unprivileged user (from root account)
+
+Package: run-as-user
+Architecture: i386
+Version: 1.0.0
+Priority: optional
+Section: utilities
+Maintainer: fredx181
+Installed-Size: 72
+Depends: libc6, gtkdialog, xterm, dbus-x11, chpupsocket
+Filename: ./run-as-user_1.0.0_i386.deb
+Size: 21340
+MD5sum: 5e0ba938cabe668955269cb67061e2f1
+SHA1: d6777ae280fc1eb1ff636aa99046168c26cef4ed
+SHA256: 12b425f98693cf49c0f2b757902e7187ae7588e32b1acf3f9d3c46db48b3f1ae
+SHA512: d7a4150a42cf6e6482647f25d2beb06819ed9182aeee51f12940e8fe2ddb5ec6a5a5b695ec2eeebbb3c912564f9419e16e5180e2c0f67ce9012d52440c1b91fb
 Description: Run application as unprivileged user (from root account)
 
 Package: samba-server-control
