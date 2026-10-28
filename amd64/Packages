@@ -10105,6 +10105,31 @@ Description: Internet Radio Player
  v1.9.3, fix for when containing special chars (e.g. &) in search query
  v1.9.4, streamripping done with mpv (and lua script) instead of streamripper
 
+Package: yradio
+Architecture: amd64
+Version: 1.9.5
+Priority: optional
+Section: utilities
+Maintainer: fredx181
+Installed-Size: 878
+Depends: yad (>= 1:0.36.0), mpv, xdotool, streamripper, curl, gawk
+Filename: ./yradio_1.9.5_amd64.deb
+Size: 368780
+MD5sum: c43f0b01ed6b8f9665a9ae653f33766e
+SHA1: e5ace617454202b2dab69fcacde542cf188bec88
+SHA256: 92f5e275adf73f29fc8a14706cbe79f35b97f7e4e30b5aea6a623d51ae07d9ce
+SHA512: cb447ef76322c3443d7690e0f925f42d94ec7a42e91a725b6085916cdf7db75ed86e571c303eb064999ae240daf1bac7757952aed3719d85ced9fc6ca99612d9
+Description: Internet Radio Player
+ v1.3, works with mpv and mplayer
+ v1.7, direct online search
+ v1.8, volume fix for in case pipewire or pulseaudio running
+ v1.8.2-0, fixed that playing with mpv didn't work properly
+ v1.9.1, not depending on 'jq' anymore, using csv extracting for search
+ v1.9.2, portable setup with yad GTK3 included
+ v1.9.3, fix for when containing special chars (e.g. &) in search query
+ v1.9.4, streamripping done with mpv (and lua script) instead of streamripper
+ v1.9.5, stream ripping fix for when ripping multiple streams
+
 Package: yt-dlp
 Architecture: all
 Version: 2:2025.05.22
